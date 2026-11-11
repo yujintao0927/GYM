@@ -42,3 +42,24 @@
 ## C03补充：消费与额度子命令
 
 内部command另含CONSUME/RESERVE_QUOTA/COMMIT_QUOTA/RELEASE_QUOTA；请求{sourceId,entitlementId或accountId,capability?,period?,quantity,consumptionKey,expectedVersion,bookingId或visitId或aiRequestId}；quantity为正整数，源scope只开放课程、入场或健康调用各自能力。响应{commandId,consumptionId或reservationId,remainingUnits,reserved,consumed,version,replayed}。CONSUME以权益、服务状态和退款hold共同裁决，成功扣减与源业务状态在同一本地事务；重复consumptionKey不再扣。配额预占成功才发起AI，成功提交，失败或明确未发送则释放；结果未知不立即释放而查询原请求，超时回收须按同一aiRequestId对账，不重复计费。预占提交释放按reservationId幂等，已提交再释放409，额度不足403 QUOTA_EXCEEDED。健康不能直接写QuotaLedger。以上绑定D07/D09/D15/D20及REQ-019/034/039/043/044/094/096，P06未批时不得开放真实额度实现。
+
+## 契约显式追踪索引
+
+| 契约 | REQ（主项，复合项仍须场景全分支） | 设计场景 / TASK-001同号S |
+| --- | --- | --- |
+| C01 | REQ-002、REQ-006、REQ-013、REQ-014、REQ-097 | D01/D02/D16/D20 |
+| C02 | REQ-001、REQ-004、REQ-022、REQ-023、REQ-024、REQ-025、REQ-027 | D03/D04/D23 |
+| C03 | REQ-007、REQ-008、REQ-010、REQ-016、REQ-019、REQ-021、REQ-028、REQ-091、REQ-094、REQ-095 | D01/D02/D04/D07/D09/D13/D15 |
+| C04 | REQ-009、REQ-018、REQ-020、REQ-056 | D01/D09/D17/D23 |
+| C05 | REQ-004、REQ-005、REQ-061、REQ-064、REQ-080 | D10/D14/D20/D23 |
+| C06 | REQ-029、REQ-032、REQ-033、REQ-034、REQ-035、REQ-036、REQ-037、REQ-038、REQ-039、REQ-084、REQ-094、REQ-096 | D05/D06/D07/D08/D09/D10/D11/D12/D13/D14 |
+| C07 | REQ-065、REQ-066、REQ-067、REQ-075 | D08/D14/D20/D21 |
+| C08 | REQ-059、REQ-060、REQ-061、REQ-081、REQ-096 | D09/D10 |
+| C09 | REQ-011、REQ-012、REQ-015、REQ-040、REQ-041、REQ-042、REQ-043、REQ-044、REQ-045、REQ-079、REQ-085、REQ-092、REQ-097 | D02/D15/D16/D22 |
+| C10 | REQ-047、REQ-048、REQ-053、REQ-068、REQ-074、REQ-088 | D17/D19/D20/D21 |
+| C11 | REQ-046、REQ-049、REQ-050、REQ-051、REQ-052、REQ-083 | D01/D17/D18/D19 |
+| C12 | REQ-058、REQ-071 | D01/D21/D23 |
+| C13 | REQ-030、REQ-031、REQ-062、REQ-063、REQ-097 | D11/D12/D14/D16/D23 |
+| C14 | REQ-054、REQ-055、REQ-056、REQ-057、REQ-063、REQ-076 | D10/D20/D21/D23 |
+
+REQ-003/069/086是集成配置限制，REQ-093是架构限制，REQ-017/026/087/090是排除行为，REQ-070–078/089是延期及上线限制，所有契约共同遵守D20–D23的范围门槛，不为延期行为增设可执行接口。

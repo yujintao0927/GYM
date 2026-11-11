@@ -60,3 +60,11 @@ git log -2 --oneline
 - 初次建 worktree 写 Git 引用受沙箱限制；获自动审批允许后创建成功。没有退回共享目录修改。
 
 本次交付提交可用 `git log --oneline -- docs/deliveries/TASK-001/` 定位。实际推送完成后另补记结果，避免在未执行时宣称成功。
+
+## 实际提交与推送结果
+
+- 主交付提交：7098e83（docs: review TASK-001 baseline coverage and acceptance scenarios），仅本任务5文件。
+- `git push -u origin codex/task-001-baseline-review`：退出0，远端新分支创建成功，上游已设置为 origin/codex/task-001-baseline-review；无认证、网络或推送拒绝错误，未强推。
+- 本节为推送后结果补记，单独提交并正常推送；最终交接 SHA 使用包含本节的分支 HEAD（无法把提交自身 SHA 写入自身文件）。主交付 SHA 与此补记提交均保留，不改写已推送历史。
+- 结果补记后的复验命令：`python docs/deliveries/TASK-001/verify.py`、`git diff --check 8a5fc82`、`git status --short`、`git rev-list --left-right --count HEAD...origin/codex/task-001-baseline-review`。最终同步证据和最终 SHA 在执行聊天交接。
+- COORD-01 接收时材料位置为任务分支的 docs/deliveries/TASK-001/，请对照实际 diff 审查；仅协调者能登记待验收及后续验收结论。无自动回传。

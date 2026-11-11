@@ -45,3 +45,9 @@
 权益TASK-004独占会员卡、平台个人套餐、门店服务年费套餐的商品目录及价格版本；商家只通过授权命令配置本店卡，平台专权配置个人/服务套餐，金额未批准时不可发布售卖。课程商品与取消政策由课程唯一子任务独占。交易TASK-005持下单时不可变商品/价格/归属快照，不回写目录；商家服务模块持实际服务期限，不持资金流水。
 
 权益TASK-004独占能力额度配置及QuotaLedger(accountId,capability,period,limit,reserved,consumed,version)，健康TASK-006只请求预占/提交/释放，不自行计数；额度周期/叠加仍P06待批。共享账号跨卡能力的额度只此一处裁决。目录及Quota迁移均ENT前缀，避免健康/交易重复拥有。
+
+## ACC-002返工的用例所有权（不新增实现授权）
+
+- REV-002-01：TASK-004独占C04 EnterStore应用编排及C03内部ActivateForEntry、Consume；Visit/权益/一次性挑战消费由各自所有者在同一本地事务写入，不开放本人独立激活。课程首次履约由课程用例编排C03 ActivateForFulfillment，不能伪装成入场；个人支付激活由TASK-005确认事实调用权益命令。
+- REV-002-02：TASK-003是账号级CloseAccount唯一编排者，独占AccountClosure(id,accountId,state,confirmedAt,sessionEpoch,cleanupState)及身份状态写入；TASK-006只执行RevokeAllConsents和健康隔离删除作业，不能写Account。交易、权益及其他模块负责自己必要保留/清理，身份Outbox持关闭事件与重试记录，不用健康清理完成代替账号关闭。
+- REV-002-03：TASK-005独占Refund及RefundInstruction、AttemptLog、ManualCase状态和资金写入；TASK-004仅依授权的hold/resume/close命令写权益。Instruction以refundId+mode唯一，资金累计上限锁订单裁决；适配器不能自行恢复权益或另建资金指令。

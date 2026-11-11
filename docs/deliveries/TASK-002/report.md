@@ -49,3 +49,9 @@
 - 首次`git diff --check 26c45c7`发现5处新增EOF空行，已去除；重新执行结果及暂存检查以本轮Git提交验证输出为准。没有将首次结果说成通过。
 - 检查命令：Python以正则解析各文件REQ/D/C引用与Markdown链接并Path.exists，统计scenarios的97行唯一主索引及26个D标题、contracts的14组C定义；`git diff --name-only 26c45c7`核对仅本目录7文件；`git diff --check 26c45c7`、`git diff --cached --check`、`git diff 0571ab0 -- docs/deliveries/TASK-002/`核对空白及实际差异。未执行TASK-001/verify.py、构建或业务测试。
 - 本轮仅正常追加提交并推送原分支，不改写0571ab0；实际SHA及推送结果在执行后补记。最终请将本报告、分支HEAD SHA和docs/deliveries/TASK-002/带回COORD-01，未自动通知。
+
+### 本轮实际Git结果
+
+- 返工主提交`0badae75ed00f00e9e93279e9f93806cc4446dbe`，七份TASK-002文档；提交前`git diff --check 26c45c7`及`git diff --cached --check`均退出0。
+- `git push origin codex/task-002-domain-contracts`退出0，远端从0571ab0正常前进至0badae7；没有强推、改写历史或合并协调台账。
+- 本节是实际执行后的结果补记，单独提交推送；最终SHA取包含补记的分支HEAD，避免将自身SHA写入自身文件。最终同步、干净状态及范围以执行聊天终验输出交接。无自动回传，请用户带回COORD-01重新待验收。

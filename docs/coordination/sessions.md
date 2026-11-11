@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | COORD-01 | 总协调、文档维护、验收与集成组织 | 当前聊天，工具未暴露 ID | ac663c1 | D:/GYM / main（文档） | 本次用户已授权 | 本聊天及仓库日志 |
 | EXEC-001 | TASK-001，唯一获授权执行者 | 用户本轮转交前置检查报告的原执行聊天；工具 ID 未知 | 当前业务输入 5f5e091；ac663c1 仅历史对照 | 已建独立工作区，见 tasks.md / codex/task-001-baseline-review | 已人工回传、验收、集成 f554f75 | 用户将交付报告与提交 SHA 带回本聊天 |
-| EXEC-002 | TASK-002 | 本轮用户回传交付报告的原聊天；工具ID未知 | 5f5e091 业务 + f554f75 已验收报告 + 本轮调度说明 | 已建独立工作区，见tasks.md / codex/task-002-domain-contracts | 已回传0571ab0，ACC-002返工；返工说明待人工带回 | 用户将报告带回本聊天 |
+| EXEC-002 | TASK-002 | 本轮用户回传交付报告的原聊天；工具ID未知 | 5f5e091 业务 + f554f75 已验收报告 + 本轮调度说明 | 已建独立工作区，见tasks.md / codex/task-002-domain-contracts | 返工c781088已回传；ACC-003验收、86161fe集成 | 用户将报告带回本聊天 |
 
 能力核查：ALL_TOOLS 未提供 list_threads/create_thread/read_thread/wait_threads/send_message_to_thread。不得用子代理冒充用户可见新聊天。既有会话情况未知，用户补充映射后去重再派发。未使用其他服务消息工具向外发送任务。
 
@@ -18,3 +18,7 @@ COORD-01 指定 EXEC-001 为 TASK-001 唯一获授权执行者，不再另行派
 最新状态：EXEC-001 已实际开工并完成，工作区路径见 tasks.md；TASK-001 已验收集成，后续不得按历史受阻段落重复开工。下一项仅 TASK-002 设计，当前无自动派发或回传。
 
 TASK-002最新：已由EXEC-002交付并经首轮审查返工，不新派同任务聊天。返工Prompt已保存；没有自动送达、唤醒或回传机制。
+
+## 当前会话安排
+
+EXEC-002设计任务已验收，不继续按旧返工Prompt修改。TASK-003A拟EXEC-003A，未绑定/未创建，等待人工派发，分支拟codex/task-003a-service-foundation；用户带回报告后登记实际工作区和聊天标识。其他聊天仍无法全局检索，若发现重复任务暂停报告。本轮再次核查ALL_TOOLS，仍无create_thread/list_threads/send_message_to_thread/wait_threads工具；未用子代理替代工作聊天。

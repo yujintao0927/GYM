@@ -42,3 +42,11 @@ DEC-011：共享归属澄清。TASK-007 唯一负责模拟手环事件及榜单�
 ## DEC-012：TASK-002 首轮设计返工
 
 COORD-01依据ACC-002将0571ab0设计交付置为返工，未集成main，未批准完整设计、技术栈或P01–P09政策提案。原EXEC-002负责三项REV修订，原分支追加提交；对应实现全部保持未解锁。
+
+## DEC-013：设计稿复验通过与基础范围批准
+
+2026-11-11，COORD-01依据ACC-003验收c781088设计稿，集成86161fe。用户在异步确认中选择“批准 Java 方案及基础工程范围（推荐）”，批准Java+Spring Boot+MySQL+Flyway，并以修订模块、权限、事务边界作为首批基础工程输入。未定收费、日卡、补偿、隐私等分支仍不得实现；不将此次批准解释为P01–P09全部获批。P09技术方向已解决，具体版本由协调者核查锁定。
+
+DEC-014：首批技术基线与范围。Java编译目标21、Spring Boot 4.1.2、Maven Wrapper 3.10.0；首任务只建立无数据库服务骨架、默认拒绝访问策略和健康检查。Flyway/MySQL依赖版本后续由锁定Boot BOM管理并在数据库任务记录解析值，不在本任务接库或创建迁移。版本兼容需执行者实际构建验证，不声称当前机器JDK已经可用。
+
+官方核查日期2026-11-11：[Spring Boot系统要求](https://docs.spring.io/spring-boot/system-requirements.html)支持Java21且Maven最低3.6.3；[Maven下载页](https://maven.apache.org/download.cgi)当前推荐3.10.0；[Flyway迁移](https://documentation.red-gate.com/fd/migrations-271585107.html)说明版本迁移和顺序执行。本轮只核资料，未安装或测试这些版本。

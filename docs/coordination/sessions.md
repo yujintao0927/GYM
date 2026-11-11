@@ -22,3 +22,7 @@ TASK-002最新：已由EXEC-002交付并经首轮审查返工，不新派同任�
 ## 当前会话安排
 
 EXEC-002设计任务已验收，不继续按旧返工Prompt修改。TASK-003A拟EXEC-003A，未绑定/未创建，等待人工派发，分支拟codex/task-003a-service-foundation；用户带回报告后登记实际工作区和聊天标识。其他聊天仍无法全局检索，若发现重复任务暂停报告。本轮再次核查ALL_TOOLS，仍无create_thread/list_threads/send_message_to_thread/wait_threads工具；未用子代理替代工作聊天。
+
+## PAR-001并行派发安排
+
+原TASK-003A如已派给执行聊天则沿用；目前协调者未收到开工报告，状态保留待派发/待确认实际映射。新增TASK-003D拟EXEC-003D、TASK-005V拟EXEC-005V，均未创建/未绑定，分别独立工作区与分支，完整Prompt已保存，等待用户人工派发。不可声称自动送达。任何一项单独交付即可单独回传，不必等本批全部完成。

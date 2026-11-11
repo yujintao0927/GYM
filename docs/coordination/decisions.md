@@ -50,3 +50,7 @@ COORD-01依据ACC-002将0571ab0设计交付置为返工，未集成main，未批
 DEC-014：首批技术基线与范围。Java编译目标21、Spring Boot 4.1.2、Maven Wrapper 3.10.0；首任务只建立无数据库服务骨架、默认拒绝访问策略和健康检查。Flyway/MySQL依赖版本后续由锁定Boot BOM管理并在数据库任务记录解析值，不在本任务接库或创建迁移。版本兼容需执行者实际构建验证，不声称当前机器JDK已经可用。
 
 官方核查日期2026-11-11：[Spring Boot系统要求](https://docs.spring.io/spring-boot/system-requirements.html)支持Java21且Maven最低3.6.3；[Maven下载页](https://maven.apache.org/download.cgi)当前推荐3.10.0；[Flyway迁移](https://documentation.red-gate.com/fd/migrations-271585107.html)说明版本迁移和顺序执行。本轮只核资料，未安装或测试这些版本。
+
+## DEC-015：优先并行且批量提供任务
+
+2026-11-11用户明确要求“能并行执行的尽量同时给我多个然后并行执行”。据此建立PAR-001：003A骨架、003D身份详细设计、005V退款验收数据集三项独立并行。没有稳定输入、共享文件冲突或待定业务政策依赖时仍串行；不为凑数量扩首期。现有骨架聊天如已开工继续原任务，不重复派发。技术、收费和隐私批准边界不变。

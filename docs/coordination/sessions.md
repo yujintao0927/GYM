@@ -46,3 +46,11 @@ EXEC-003A为用户本次回传报告原聊天，工具ID未知；工作区见tas
 TASK-UX001拟EXEC-UX001、TASK-QA001拟EXEC-QA001，尚未绑定/创建，分别独立工作区及分支，完整Prompt已保存；等待用户人工派发，不声称执行中或自动通知。若用户已有同类执行聊天则先去重沿用，不重复开工。
 
 2026-11-13用户明确确认UX001与QA001均执行中，保持原聊天，不重复派发；实际标识待回报。003B拟EXEC-003B，未创建/绑定，等待人工派发，可与二者独立并行。
+
+## UX与QA实际回传（2026-11-13）
+
+EXEC-QA001为本轮报告原聊天，工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4b6-fda5-7002-8606-5303c2d8698f/task-qa001，分支codex/task-qa001-test-strategy，5df227b已回传、ACC-007验收、4b29b6a集成。
+
+EXEC-UX001为本轮报告原聊天，工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4b6-8866-7af0-8956-764e1c49ad36/task-ux001，分支codex/task-ux001-flows-wireframes，906fc7a已回传、ACC-008验收、1997a32集成，用户认可结构。覆盖此前执行中状态。两聊天工具ID未知，不重复派发。
+
+TASK-WEB001拟EXEC-WEB001、TASK-MINI001拟EXEC-MINI001尚未创建/绑定，等待人工派发。003B是否实际领取尚未回传，原Prompt继续有效，若已开工沿用原聊天，避免重复。

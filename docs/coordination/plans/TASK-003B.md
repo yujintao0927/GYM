@@ -22,7 +22,7 @@
 
 所有成功沿用{data,requestId,mode:SIMULATED,serverTime,contractVersion}；authnSource=LOCAL_DEV明确本地开发身份，不声称微信认证。错误信封不含秘密、堆栈、SQL或账号存在性。
 
-- POST /v1/sessions：JSON {credential:{kind:LOCAL_PASSWORD,login,proof},entry,clientKind}，Idempotency-Key必填；201 data={sessionId,sessionToken,expiresAt,refreshToken,refreshExpiresAt,authnSource}。entry不授角色；禁止客户端传accountId/role来授予。错误证明/不存在/禁用凭据统一401 AUTHENTICATION_FAILED；验证证明后确认账号关闭才403 ACCOUNT_CLOSED。重复同键同体不多发会话，无法安全重取秘密409 REAUTH_REQUIRED；同键异体409 IDEMPOTENCY_MISMATCH，不存原文证明。
+- POST /v1/sessions：JSON {credential:{kind:LOCAL_PASSWORD,login,proof},entry,clientKind}，Idempotency-Key必填；201 data={sessionId,sessionToken,expiresAt,refreshToken,refreshExpiresAt,authnSource,generation:0}。entry不授角色；禁止客户端传accountId/role来授予。错误证明/不存在/禁用凭据统一401 AUTHENTICATION_FAILED；验证证明后确认账号关闭才403 ACCOUNT_CLOSED。重复同键同体不多发会话，无法安全重取秘密409 REAUTH_REQUIRED；同键异体409 IDEMPOTENCY_MISMATCH，不存原文证明。
 - POST /v1/sessions/refresh：JSON {refreshToken,generation}，Idempotency-Key；201同类Token及新generation、sessionId不变。锁Account→Session→Family→Node，旧叶消费与新叶同事务；不同key重用旧叶401并撤family；同key重试不生成第二叶，返回409 REAUTH_REQUIRED而非伪造可重取明文。过期/关闭/撤销401。刷新后旧access失效，不延长family7天上限。
 - DELETE /v1/sessions/{id}：Bearer本人会话，只能撤本人目标Session并撤其refresh家族；200 data={sessionId,revoked:true}。他人目标404；已失效旧Bearer401，不为最小回执绕过鉴权。不实现平台风险吊销和员工管理。
 - GET /v1/me/contexts：有效Bearer，200 data={accountId,staffScopes:[],entitlementSources:[],asOf}；不伪造尚未实现角色/卡。匿名/伪造/过期/撤销401。所有其他业务路由保持拒绝，切入口/伪租户/伪role不获权。

@@ -25,3 +25,5 @@
 真实HTTP/MySQL/打包进程已执行，认证本身仍 LOCAL_DEV/SIMULATED；无生产Cookie、第三方身份、员工或付费授权、注销、健康/支付/前端联调或生产安全验收。私有诊断不交付，不含Token/密码/HMAC/原HTTP body。缺配置或未批政策分支不猜测实现，无自动唤醒/回传/续派。
 
 请用户醒来后将此报告、最终SHA及工作区路径带回COORD-01，由其独立复核与决定验收；本包仅交付待验收。
+
+最终功能/工具与138条结果提交SHA：9521f65a8a968e6000d4c1b4f583b767e4ed1f46。该提交已成功推送origin/codex/task-night002-identity-regression并设置上游；工作区status为空。其后仅追加此Git结果说明的文档提交，分支最终HEAD以聊天最终回报及git rev-parse HEAD为准。最终verify.py退出0，cases=138；git diff --check及cached检查退出0。未失败的Git操作无；初次沙箱worktree写入失败已升级成功。

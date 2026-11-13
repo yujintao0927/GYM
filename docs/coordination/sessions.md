@@ -54,3 +54,9 @@ EXEC-QA001为本轮报告原聊天，工作区C:/Users/28795/.codex/visualizatio
 EXEC-UX001为本轮报告原聊天，工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4b6-8866-7af0-8956-764e1c49ad36/task-ux001，分支codex/task-ux001-flows-wireframes，906fc7a已回传、ACC-008验收、1997a32集成，用户认可结构。覆盖此前执行中状态。两聊天工具ID未知，不重复派发。
 
 TASK-WEB001拟EXEC-WEB001、TASK-MINI001拟EXEC-MINI001尚未创建/绑定，等待人工派发。003B是否实际领取尚未回传，原Prompt继续有效，若已开工沿用原聊天，避免重复。
+
+## 003B验收及MINI待验收事实登记
+
+EXEC-003B：用户本次报告原聊天，工具ID未知；工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4c4-dfef-7920-9f27-8b643f826afe/task-003b，分支codex/task-003b-local-sessions，e20e499已回传、ACC-009验收、08143f4集成。
+
+EXEC-MINI001：前次用户报告原聊天，工具ID未知；工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4d4-297c-7480-b407-6d1d136aae01/task-mini001；分支codex/task-mini001-user-foundation，77ac49d待验收，尚未独立验收或集成。用户暂缓安装开发者工具，环境验证继续受阻，不反复催安装；真实认证联调仍需材料。WEB001无新回传，不推断运行或完成。

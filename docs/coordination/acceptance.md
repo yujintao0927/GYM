@@ -96,3 +96,13 @@ ACC-006集成补记：用户同时通过PR #2合并同一任务，远端集成c2
 - 独立verify_delivery.py退出0：24PAGE、97REQ、14契约映射、39链接、9SVG/PNG、范围及敏感模式通过。提交仅本任务26文件，工作区干净、同步0/0，ls-remote完整SHA匹配，diff检查通过。
 - 设计包交付已验收，1997a32正常合并。12旅程/24页面/14切片候选不是全部前端实现；REQ-092复合分支等由协调补充对齐，不能只靠一个PAGE判父REQ完成。
 - 用户随后明确选择“认可结构，批准该前端技术方向”，批准结构方向及Web Vue3/TS/Vite、小程序原生TS的基础前端闭环；不等于最终品牌/配色/像素样式获批。未接后端/未选细版本等边界如实保留。
+
+## ACC-009：TASK-003B本地账号会话闭环验收通过（2026-11-13）
+
+- 接收e20e4999570277ed234d34e2fd9625ab5a64be68先待验收；实际基线3c649a1，源分支codex/task-003b-local-sessions，工作区见sessions.md。实际差异20文件，仅backend与自身交付；包含此前只读兼容探测工具，无其他任务/协调文件。
+- 实际审阅全部服务/控制器/安全/错误/CLI/数据库配置/迁移/测试及新进程脚本：local-dev精确路由开放，控制器内鉴权与本人边界；密码BCrypt12、Token仅摘要、指纹HMAC；预期拒绝提交防护计数/重放撤销，基础设施异常回滚；Account→Session→Family→Node及并发测试证据；开发来源/账号限流；默认无DB与health边界保留。未因permitAll位于有限安全链就忽略控制器鉴权。
+- 独立复验：JDK21，设置当前进程DB变量及安全随机独立HMAC，不输出秘密； .\mvnw.cmd -B -o clean verify退出0，Foundation6+LocalSession21+Migration1=28，0失败/错误/跳过。真实MySQL隔离库，非H2/mock。测试只清自身HMAC来源计数及创建随机夹具，不清库。
+- 独立tools/verify-local-process.ps1退出0，CLI_FRESH_PROCESS、HTTP_LOGIN_CONTEXT_ROTATION_OLD_ACCESS_REJECT、RESTART_PERSISTENCE_RECEIPT_LOGOUT_REFRESH_REJECT、DEFAULT_PROFILE_NEW_PROCESS_BOUNDARY四组PASS；实测打包进程创建账号、generation0、刷新与旧access拒绝、重启后会话/回执持续、退出及刷新拒绝、默认profile关闭认证。finally停止自身进程，未停止Docker或用户服务。
+- 私有完整输出保留执行工作区backend/.tools/coordinator-build.log及coordinator-process.log（忽略、不提交）。仅输出汇总，凭据/Token不进入材料；工作区复验后干净、与远端0/0，ls-remote完整SHA匹配，diff检查通过。
+- 结论：限定本地开发账号会话已验收；08143f4正常合并，集成后backend及003B材料与实测提交完全一致。没有真实微信/短信、角色授予、账号注销、健康/会员/收费或前端联调验收。
+- 已知限制：Connector/J9.7.0/Flyway12.4.0固定BOM组合在MySQL26.7.0的实测通过；Flyway最高已验证9.4警告保留，不降校验、不更改服务器。仅允许当前本地开发阶段，不是厂商兼容认证或商业上线批准。

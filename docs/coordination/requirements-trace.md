@@ -125,3 +125,7 @@ DEC-018已创建gym_dev，REQ-069的数据库名依赖解除；尚无业务表�
 ## QA/UX及前端批准阶段
 
 ACC-007验收QA001的97REQ/31用例/8门槛规划，ACC-008验收UX001设计包；用户DEC-021认可结构及两端技术。实际PAGE→QA映射见ui-qa-alignment.md，测试仍未执行。TASK-WEB001/MINI001支撑REQ-002/011/012/040/041/045/079的有限前端，未交付未验收，不标整个REQ完成。
+
+## 已实现身份子集（ACC-009）
+
+TASK-003B代码backend/src/main/java/com/gym/identity/、V1 IAM及e20e499/08143f4已验收，验证LocalSessionTest/MysqlMigrationTest及verify-local-process.ps1。REQ-002/006/013/014/093仅获得本地账号会话基础，不是完整跨端/员工/门店/生产认证验收；父需求仍未全部完成。MINI001仅交付待验收，工具/真机和真实联调未通过。

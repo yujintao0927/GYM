@@ -1,0 +1,90 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] -------------------< com.gym.modules:merchant-core >--------------------
+[INFO] Building merchant-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ merchant-core ---
+[INFO] Deleting C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ merchant-core ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ merchant-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ merchant-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ merchant-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ merchant-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gym.modules.merchantcore.DatabaseGuardTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in com.gym.modules.merchantcore.DatabaseGuardTest
+[INFO] Running com.gym.modules.merchantcore.EmployeeGrantTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.gym.modules.merchantcore.EmployeeGrantTest
+[INFO] Running com.gym.modules.merchantcore.MerchantMysqlTest
+23:48:32.570 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:32.625 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:32.719 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:32.739 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:32.762 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.015s)
+23:48:32.789 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz001`: 3
+23:48:32.794 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz001` is up to date. No migration necessary.
+BIZ001_EVIDENCE [{version=3, checksum=-407201789, success=true}]
+23:48:32.960 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:32.978 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:32.992 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.011s)
+23:48:33.008 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz001`: 3
+23:48:33.009 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz001` is up to date. No migration necessary.
+23:48:33.032 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:33.050 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:35.839 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:35.853 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:35.877 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:35.890 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:35.900 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.008s)
+23:48:35.912 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz001`: 3
+23:48:35.913 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz001` is up to date. No migration necessary.
+23:48:35.930 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz001?createDatabaseIfNotExist=true (MySQL 26.7)
+23:48:35.942 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:48:35.958 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.013s)
+23:48:35.969 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz001`: 3
+23:48:35.970 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz001` is up to date. No migration necessary.
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.950 s -- in com.gym.modules.merchantcore.MerchantMysqlTest
+[INFO] Running com.gym.modules.merchantcore.ServiceTermTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.gym.modules.merchantcore.ServiceTermTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ merchant-core ---
+[INFO] Building jar: C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\target\merchant-core-0.0.1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  37.755 s
+[INFO] Finished at: 2026-11-13T23:48:40+08:00
+[INFO] ------------------------------------------------------------------------

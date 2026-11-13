@@ -1,0 +1,88 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] -------------------< com.gym.modules:merchant-core >--------------------
+[INFO] Building merchant-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ merchant-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ merchant-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ merchant-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ merchant-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ merchant-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gym.modules.merchantcore.EmployeeGrantTest
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.153 s <<< FAILURE! -- in com.gym.modules.merchantcore.EmployeeGrantTest
+[ERROR] com.gym.modules.merchantcore.EmployeeGrantTest.emptyScopeAndInvalidVersionRejected -- Time elapsed: 0.089 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:159)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:74)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.gym.modules.merchantcore.EmployeeGrantTest.emptyScopeAndInvalidVersionRejected(EmployeeGrantTest.java:19)
+
+[ERROR] com.gym.modules.merchantcore.EmployeeGrantTest.revokeImmediatelyDeniesWithoutMembershipDependency -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.UnsupportedOperationException
+	at com.gym.modules.merchantcore.domain.EmployeeGrant.revoke(EmployeeGrant.java:6)
+	at com.gym.modules.merchantcore.EmployeeGrantTest.revokeImmediatelyDeniesWithoutMembershipDependency(EmployeeGrantTest.java:15)
+
+[ERROR] com.gym.modules.merchantcore.EmployeeGrantTest.explicitStoreSetIsImmutableAndNewStoresNeverExpandIt -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.UnsupportedOperationException
+	at com.gym.modules.merchantcore.domain.EmployeeGrant.includes(EmployeeGrant.java:5)
+	at com.gym.modules.merchantcore.EmployeeGrantTest.explicitStoreSetIsImmutableAndNewStoresNeverExpandIt(EmployeeGrantTest.java:10)
+
+[INFO] Running com.gym.modules.merchantcore.ServiceTermTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in com.gym.modules.merchantcore.ServiceTermTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   EmployeeGrantTest.emptyScopeAndInvalidVersionRejected:19 Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+[ERROR] Errors: 
+[ERROR]   EmployeeGrantTest.explicitStoreSetIsImmutableAndNewStoresNeverExpandIt:10 ? UnsupportedOperation
+[ERROR]   EmployeeGrantTest.revokeImmediatelyDeniesWithoutMembershipDependency:15 ? UnsupportedOperation
+[INFO] 
+[ERROR] Tests run: 5, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.376 s
+[INFO] Finished at: 2026-11-13T23:20:49+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project merchant-core: There are test failures.
+[ERROR] 
+[ERROR] See C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

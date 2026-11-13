@@ -51,3 +51,7 @@ backend 的 POM、官方 Wrapper 脚本/引导 JAR/校验配置、GymApplication
 运行产物实际 BOOT-INF/lib 清单见 runtime-dependencies.txt（含解析版本，不包含二进制），没有 JDBC/MySQL/Flyway；依赖树命令的结果另在完成后记录。执行者自审实际暂存差异、安全规则和忽略项：允许范围之外无修改，构建产物/便携工具/私有配置均被忽略。git diff --check 和 git diff --cached --check 已退出0；只暂存本任务文件。无协调台账/旧交付改动，不替代 COORD-01 的独立验收。
 
 依赖树命令 `mvnw.cmd -B dependency:tree -DoutputFile=.tools/dependency-tree.txt` 最终退出0，完整解析版本见 dependency-tree.txt。最终重复探测PID43596、端口55672，25项通过并已停止。敏感模式扫描唯一命中是官方 Wrapper 对 MVNW_PASSWORD 环境变量的引用，人工核实无字面凭据；没有将环境变量值写入交付。16项文件暂存范围仅 backend、本目录及根.gitignore；最终数量以 git show --stat 为准。
+
+## 实际提交与推送
+
+完整实现提交 `c48c58bd249abebb4f65d4b0f6a2a91c8dda53e5`，16个文件；`git push -u origin codex/task-003a-service-foundation` 退出0，上游设置成功。`git ls-remote origin refs/heads/codex/task-003a-service-foundation` 实际返回该SHA；工作区干净。没有强推、合并main、改写历史或创建PR。本节仅补记已执行结果，正常追加文档提交并推送；最终SHA以包含本节的分支HEAD和聊天最终回报为准。

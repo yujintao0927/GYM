@@ -45,3 +45,7 @@
 ## 提交前实际验证结果
 
 `python docs/deliveries/TASK-QA001/verify_docs.py`退出0：97唯一REQ、31 QA、双向映射、C/D/I/REQ/QA引用、164本地链接、L01–L09、凭据值/范围/diff检查通过。显式为REQ-092四组内容补齐QA映射；父项仍未通过。人工核对003A实际6个测试方法及探测边界、005V V01–V16推导与未验证账务边界；结构检查不验证未来业务行为。提交前暂存范围和差异检查结果由最终回报补充。
+
+## 实际提交与推送结果
+
+完整交付提交 `3e78c14d39d77c6332c231360a9b76fbf0729b4d`，6文件且仅本任务目录；`git push -u origin codex/task-qa001-test-strategy`退出0，上游设置成功。`git ls-remote origin refs/heads/codex/task-qa001-test-strategy`返回相同SHA，提交后工作区干净。暂存diff检查退出0，无范围外修改；没有合并main或创建PR。本节补记已执行结果，正常追加报告提交并推送；包含本节的最终SHA见最终聊天回报及分支HEAD。

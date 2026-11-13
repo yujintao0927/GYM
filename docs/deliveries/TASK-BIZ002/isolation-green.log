@@ -1,0 +1,143 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO]
+[INFO] ---------------------< com.gym.modules:trade-core >---------------------
+[INFO] Building trade-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ trade-core ---
+[INFO] Deleting C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\target
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ trade-core ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ trade-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target\classes
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ trade-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\test\resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ trade-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 21] to target\test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ trade-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gym.modules.tradecore.IntervalsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.236 s -- in com.gym.modules.tradecore.IntervalsTest
+[INFO] Running com.gym.modules.tradecore.MysqlEnvironmentTest
+MYSQL_VERSION=26.7.0
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.432 s -- in com.gym.modules.tradecore.MysqlEnvironmentTest
+[INFO] Running com.gym.modules.tradecore.RefundInstructionTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.gym.modules.tradecore.RefundInstructionTest
+[INFO] Running com.gym.modules.tradecore.RefundRulesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gym.modules.tradecore.RefundRulesTest
+[INFO] Running com.gym.modules.tradecore.TradeMysqlTest
+23:35:46.642 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:46.697 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:46.772 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:46.790 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:46.812 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.014s)
+23:35:46.834 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:46.838 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:47.348 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:47.365 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:47.400 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:47.417 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:47.430 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:35:47.442 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:47.443 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:47.471 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:47.493 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:47.526 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:47.538 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:47.551 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:35:47.566 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:47.567 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:47.599 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:47.617 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:47.643 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:47.660 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:47.674 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:35:47.691 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:47.692 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:48.009 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:48.028 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:48.055 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:48.073 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:48.089 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.011s)
+23:35:48.105 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:48.106 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:48.934 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:48.953 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:48.978 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:48.991 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:49.009 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:35:49.021 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:49.022 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:49.167 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:49.179 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:49.201 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:49.214 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:49.224 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.007s)
+23:35:49.234 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:49.234 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:50.365 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:50.378 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:50.402 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:50.412 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:50.425 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.008s)
+23:35:50.435 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:50.437 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:50.843 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:50.856 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:50.877 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:50.889 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:50.903 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.010s)
+23:35:50.916 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:50.917 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:51.242 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:51.255 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:51.276 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:51.286 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:51.299 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:35:51.311 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:51.312 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+23:35:51.482 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:51.493 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:51.516 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz002?allowPublicKeyRetrieval=true&useSSL=false (MySQL 26.7)
+23:35:51.529 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:35:51.538 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.006s)
+23:35:51.548 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz002`: 4
+23:35:51.549 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz002` is up to date. No migration necessary.
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.689 s -- in com.gym.modules.tradecore.TradeMysqlTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ trade-core ---
+[INFO] Building jar: C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\target\trade-core-0.0.1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.848 s
+[INFO] Finished at: 2026-11-13T23:35:52+08:00
+[INFO] ------------------------------------------------------------------------

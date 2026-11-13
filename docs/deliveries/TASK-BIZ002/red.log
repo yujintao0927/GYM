@@ -1,0 +1,75 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO]
+[INFO] ---------------------< com.gym.modules:trade-core >---------------------
+[INFO] Building trade-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ trade-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\main\resources
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ trade-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] No sources to compile
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ trade-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\test\resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ trade-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[2,40] �����com.gym.modules.tradecore.domain������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[12,30] �Ҳ�������
+  ����:   ���� RefundRules
+  λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[16,26] �Ҳ�������
+  ����:   ���� RefundRules
+  λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[17,26] �Ҳ�������
+  ����:   ���� RefundRules
+  λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[18,14] �Ҳ�������
+  ����:   ���� RefundRules
+  λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[INFO] 5 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.774 s
+[INFO] Finished at: 2026-11-13T23:19:27+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:testCompile (default-testCompile) on project trade-core: Compilation failure: Compilation failure:
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[2,40] �����com.gym.modules.tradecore.domain������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[12,30] �Ҳ�������
+[ERROR]   ����:   ���� RefundRules
+[ERROR]   λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[16,26] �Ҳ�������
+[ERROR]   ����:   ���� RefundRules
+[ERROR]   λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[17,26] �Ҳ�������
+[ERROR]   ����:   ���� RefundRules
+[ERROR]   λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/RefundRulesTest.java:[18,14] �Ҳ�������
+[ERROR]   ����:   ���� RefundRules
+[ERROR]   λ��: �� com.gym.modules.tradecore.RefundRulesTest
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

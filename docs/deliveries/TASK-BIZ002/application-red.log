@@ -1,0 +1,131 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO]
+[INFO] ---------------------< com.gym.modules:trade-core >---------------------
+[INFO] Building trade-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ trade-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\main\resources
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ trade-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ trade-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-6ab3-7c50-a328-517be290017d\task-biz002\modules\trade-core\src\test\resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ trade-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[2,45] �����com.gym.modules.tradecore.application������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[3,45] �����com.gym.modules.tradecore.persistence������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[4,39] �����com.gym.modules.tradecore.ports������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[10,2] �Ҳ�������
+  ����:   �� TradeService
+  λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[10,24] �Ҳ�������
+  ����:   �� TradeDatabase
+  λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[12,10] �Ҳ�������
+  ����:   �� TradeDatabase
+  λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[14,15] �Ҳ�������
+  ����:   �� TradeService
+  λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[14,35] �Ҳ�������
+  ����:   �� TradePorts
+  λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[15,11] �Ҳ�������
+  ����: �� Decision
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[16,11] �Ҳ�������
+  ����: �� Account
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[17,11] �Ҳ�������
+  ����: �� Store
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[18,11] �Ҳ�������
+  ����: �� Policy
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[15,128] �Ҳ�������
+  ����: ���� Decision
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[15,143] �Ҳ�������
+  ����: ���� Decision
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[16,55] �Ҳ�������
+  ����: �� Account
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[17,52] �Ҳ�������
+  ����: �� Store
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[18,62] �Ҳ�������
+  ����: �� Policy
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[18,80] �Ҳ�������
+  ����: ���� Approval
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[66,30] �Ҳ�������
+  ����:   �� TradeDatabase
+  λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[INFO] 19 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.710 s
+[INFO] Finished at: 2026-11-13T23:26:35+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:testCompile (default-testCompile) on project trade-core: Compilation failure: Compilation failure:
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[2,45] �����com.gym.modules.tradecore.application������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[3,45] �����com.gym.modules.tradecore.persistence������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[4,39] �����com.gym.modules.tradecore.ports������
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[10,2] �Ҳ�������
+[ERROR]   ����:   �� TradeService
+[ERROR]   λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[10,24] �Ҳ�������
+[ERROR]   ����:   �� TradeDatabase
+[ERROR]   λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[12,10] �Ҳ�������
+[ERROR]   ����:   �� TradeDatabase
+[ERROR]   λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[14,15] �Ҳ�������
+[ERROR]   ����:   �� TradeService
+[ERROR]   λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[14,35] �Ҳ�������
+[ERROR]   ����:   �� TradePorts
+[ERROR]   λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[15,11] �Ҳ�������
+[ERROR]   ����: �� Decision
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[16,11] �Ҳ�������
+[ERROR]   ����: �� Account
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[17,11] �Ҳ�������
+[ERROR]   ����: �� Store
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[18,11] �Ҳ�������
+[ERROR]   ����: �� Policy
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[15,128] �Ҳ�������
+[ERROR]   ����: ���� Decision
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[15,143] �Ҳ�������
+[ERROR]   ����: ���� Decision
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[16,55] �Ҳ�������
+[ERROR]   ����: �� Account
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[17,52] �Ҳ�������
+[ERROR]   ����: �� Store
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[18,62] �Ҳ�������
+[ERROR]   ����: �� Policy
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[18,80] �Ҳ�������
+[ERROR]   ����: ���� Approval
+[ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/modules/trade-core/src/test/java/com/gym/modules/tradecore/TradeMysqlTest.java:[66,30] �Ҳ�������
+[ERROR]   ����:   �� TradeDatabase
+[ERROR]   λ��: �� com.gym.modules.tradecore.TradeMysqlTest
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

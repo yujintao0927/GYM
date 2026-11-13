@@ -7,3 +7,5 @@ Pre-flight: Web与mini无共享运行包；backend只读。使用任务交付目
 Final review: 独立只读review_web001；无认证/隔离阻断发现；隐藏类型字段已修复并回归。
 Final: minor (deferred): 登录401错误文案未细分证明无效，保留统一失效提示。
 Task WEB001: 实现与验证完成，待协调者验收；真实认证联调保留待定。首次RED流程偏差如实见report。
+
+本轮用户视觉满意后执行按图实现；资产2张、官方本地字体3字重、Phosphor2.2.1。独立审查review_redesign的P2错误溢出已先失败后修复。最终typecheck/build通过，12单测/9浏览器通过，内部视觉核验web/design-qa.md通过。未改auth.ts/records.ts/共同契约。保留P3桌面tablist方向语义与原登录401统一文案。预览5174保留，准备一次整体提交。

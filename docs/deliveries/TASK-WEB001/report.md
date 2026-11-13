@@ -56,3 +56,17 @@ src/auth.ts负责四路由、单飞刷新、内存Token与epoch；state.ts负责
 仅整体提交web/**与docs/deliveries/TASK-WEB001/**，不合并main。提交SHA及push结果由最终回复提供（避免报告自引用SHA）。请用户将本报告、最终SHA与工作区路径带回COORD-01聊天；本会话没有自动回传或通知。
 
 Git补充：首提交2da4b8d已推送；暂存检查发现records.ts末尾多空行，后续独立格式修正提交清理，不改写历史。最终diff检查、敏感扫描与范围检查均通过，分支设置上游成功；最终SHA见回复。
+
+## 2026-11-13 用户视觉复审后实现更新
+
+原中性UI已被用户否决。本节优先于前文原界面交付结论：现已按用户批准的深色力量馆登录/首页方向、第二轮记录方案2以及其饮食/训练/小屏延展重做。先图后码审批见design-review/README.md。没有变更后端接口或认证/内存记录模式，没有自动通知或请求COORD-01验收。
+
+修改：App.vue/style.css重构为摄影登录、深色首页、分类大输入记录工作台及小屏单列；新增两张无文字纯摄影资产public/images/；新增官方Noto Sans SC公开UI字形子集与OFL，运行时全部本地加载；新增精确依赖@phosphor-icons/vue2.2.1（官方https://github.com/phosphor-icons/vue，npm peer Vue>=3.2.39）；tsconfig补DOM.Iterable。其余原精确依赖保持。prettier3.8.1仅临时格式化工具，没有系统安装或添加运行依赖。字体来源https://fonts.google.com/noto/specimen/Noto+Sans+SC及Google官方fonts.gstatic.com，字体许可归档public/fonts/OFL.txt；未向字体服务发送用户资料。
+
+最终验证：npm ci成功91包；typecheck通过；12/12单测、9/9真实Chrome浏览器检查通过；生产构建通过。新增tab键盘测试先在旧界面失败；移动导航遮挡和饮食错误溢出回归均先失败再修复全绿。增加字体与图片真实加载、三种表单及双端截图检查。首轮类型检查出现FontFaceSet迭代缺类型库错误，补DOM.Iterable后通过，未隐藏或跳过。NO_COLOR/FORCE_COLOR环境警告仍无影响。具体视觉核验见web/design-qa.md（通过为内部核验，不自授用户验收）。
+
+C盘上轮曾空间不足，设计稿复制失败；本轮读取实际可用空间约12GiB后恢复，将D盘备份的三张图归档原worktree。D:/GYM内此前AGENTS.md及local-design-backup本地副本保留未提交，不覆盖其他修改，不切共享main分支。摄影资产由一个只负责资产的子代理生成，独立审查只读不编码；未拆派组件任务。
+
+新截图：evidence/approved-login-desktop.png、approved-home-desktop.png、approved-records-desktop.png、approved-food-desktop.png、approved-training-desktop.png及三页approved-*-mobile.png，均已实际打开检查。原evidence常规流程截图也更新为新界面。
+
+本地预览http://127.0.0.1:5174/保留运行。真实认证联调仍待后端独立验收；记录仍内存演示。原登录401统一文案与桌面tablist方向语义为非阻断小项，完整读屏/浏览器矩阵尚未验收。按新全局Git规则，将几轮相关设计稿、批准记录、整体实现及验证作为一个完整提交单元，不为每次微调提交，不合并main。

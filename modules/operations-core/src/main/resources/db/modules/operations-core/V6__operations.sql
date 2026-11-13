@@ -1,0 +1,9 @@
+CREATE TABLE ops_equipment(id VARCHAR(64) PRIMARY KEY,store_id VARCHAR(64) NOT NULL,name VARCHAR(120) NOT NULL,state VARCHAR(20) NOT NULL,version BIGINT NOT NULL);
+CREATE TABLE ops_history(id VARCHAR(64) PRIMARY KEY,equipment_id VARCHAR(64) NOT NULL,actor_id VARCHAR(64) NOT NULL,state VARCHAR(20) NOT NULL,note VARCHAR(1000) NOT NULL,created_at BIGINT NOT NULL);
+CREATE TABLE ops_report(id VARCHAR(64) PRIMARY KEY,equipment_id VARCHAR(64) NOT NULL,actor_id VARCHAR(64) NOT NULL,description VARCHAR(1000) NOT NULL,image_ref VARCHAR(64),created_at BIGINT NOT NULL);
+CREATE TABLE ops_receipt(actor_id VARCHAR(64) NOT NULL,key_hash CHAR(64) NOT NULL,fingerprint CHAR(64) NOT NULL,result_id VARCHAR(64) NOT NULL,PRIMARY KEY(actor_id,key_hash));
+CREATE TABLE ops_outbox(event_id VARCHAR(64) PRIMARY KEY,type VARCHAR(64) NOT NULL,aggregate_id VARCHAR(64) NOT NULL,version BIGINT NOT NULL,store_id VARCHAR(64) NOT NULL,occurred_at BIGINT NOT NULL,mode VARCHAR(20) NOT NULL);
+CREATE TABLE ops_inbox(event_id VARCHAR(64) PRIMARY KEY,fingerprint CHAR(64) NOT NULL);
+CREATE TABLE ops_fact(producer VARCHAR(40) NOT NULL,aggregate_id VARCHAR(64) NOT NULL,version BIGINT NOT NULL,fingerprint CHAR(64) NOT NULL,type VARCHAR(30) NOT NULL,merchant_id VARCHAR(64) NOT NULL,store_id VARCHAR(64) NOT NULL,account_id VARCHAR(64) NOT NULL,amount_minor BIGINT NOT NULL,present BOOLEAN NOT NULL,reliable BOOLEAN NOT NULL,occurred_at BIGINT NOT NULL,mode VARCHAR(20) NOT NULL,PRIMARY KEY(producer,aggregate_id));
+CREATE TABLE ops_contact_lock(store_id VARCHAR(64) NOT NULL,account_id VARCHAR(64) NOT NULL,PRIMARY KEY(store_id,account_id));
+CREATE TABLE ops_message(id VARCHAR(64) PRIMARY KEY,store_id VARCHAR(64) NOT NULL,account_id VARCHAR(64) NOT NULL,kind VARCHAR(30) NOT NULL,policy_id VARCHAR(64) NOT NULL,policy_version BIGINT NOT NULL,fact_version BIGINT NOT NULL,created_at BIGINT NOT NULL,UNIQUE(store_id,account_id,kind,policy_id,policy_version,fact_version));

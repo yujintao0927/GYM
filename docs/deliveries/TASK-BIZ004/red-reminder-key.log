@@ -1,0 +1,150 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] ----------------------< com.gym:operations-core >-----------------------
+[INFO] Building operations-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ operations-core ---
+[INFO] Deleting C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-b3d7-7861-b0d9-f566c8800f90\task-biz004\modules\operations-core\target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ operations-core ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ operations-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 11 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ operations-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-b3d7-7861-b0d9-f566c8800f90\task-biz004\modules\operations-core\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ operations-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ operations-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gym.modules.operationscore.OperationsTest
+23:32:54.417 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz004?createDatabaseIfNotExist=true&characterEncoding=UTF-8&connectTimeout=5000&socketTimeout=10000 (MySQL 26.7)
+23:32:54.475 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:32:54.575 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz004?createDatabaseIfNotExist=true&characterEncoding=UTF-8&connectTimeout=5000&socketTimeout=10000 (MySQL 26.7)
+23:32:54.595 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:32:54.615 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.013s)
+23:32:54.638 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz004`: 6
+23:32:54.643 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz004` is up to date. No migration necessary.
+23:32:55.458 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz004?createDatabaseIfNotExist=true&characterEncoding=UTF-8&connectTimeout=5000&socketTimeout=10000 (MySQL 26.7)
+23:32:55.475 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:32:55.507 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz004?createDatabaseIfNotExist=true&characterEncoding=UTF-8&connectTimeout=5000&socketTimeout=10000 (MySQL 26.7)
+23:32:55.522 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:32:55.560 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.010s)
+23:32:55.574 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz004`: 6
+23:32:55.575 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz004` is up to date. No migration necessary.
+[ERROR] Tests run: 14, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 3.651 s <<< FAILURE! -- in com.gym.modules.operationscore.OperationsTest
+[ERROR] com.gym.modules.operationscore.OperationsTest.databaseExceptionsNeverExposeSql -- Time elapsed: 0.452 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.gym.modules.operationscore.api.Failure> but was: <org.springframework.dao.DuplicateKeyException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:68)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.gym.modules.operationscore.OperationsTest.databaseExceptionsNeverExposeSql(OperationsTest.java:60)
+Caused by: org.springframework.dao.DuplicateKeyException: PreparedStatementCallback; SQL [insert into ops_equipment values(?,?,'secret fixture','AVAILABLE',0)]; Duplicate entry '2e63d6f7-1eec-48c3-8989-573eec70b822' for key 'ops_equipment.PRIMARY'
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:104)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:102)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1549)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:689)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:966)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1010)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1020)
+	at com.gym.modules.operationscore.OperationsTest.lambda$databaseExceptionsNeverExposeSql$34(OperationsTest.java:60)
+	at com.gym.modules.operationscore.persistence.Repository.lambda$transaction$0(Repository.java:12)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137)
+	at com.gym.modules.operationscore.persistence.Repository.transaction(Repository.java:12)
+	at com.gym.modules.operationscore.OperationsTest.lambda$databaseExceptionsNeverExposeSql$35(OperationsTest.java:60)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	... 3 more
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '2e63d6f7-1eec-48c3-8989-573eec70b822' for key 'ops_equipment.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$0(JdbcTemplate.java:971)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:670)
+	... 12 more
+
+[ERROR] com.gym.modules.operationscore.OperationsTest.policyConsentUnsubscribeFrequencyAndOwnMessages -- Time elapsed: 0.095 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected com.gym.modules.operationscore.api.Failure to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:159)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:74)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.gym.modules.operationscore.OperationsTest.failCode(OperationsTest.java:61)
+	at com.gym.modules.operationscore.OperationsTest.policyConsentUnsubscribeFrequencyAndOwnMessages(OperationsTest.java:48)
+
+[ERROR] com.gym.modules.operationscore.OperationsTest.reportReadReauthorizesPrivateReference -- Time elapsed: 0.063 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:201)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:147)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:558)
+	at com.gym.modules.operationscore.OperationsTest.reportReadReauthorizesPrivateReference(OperationsTest.java:59)
+
+[ERROR] com.gym.modules.operationscore.OperationsTest.reminderRechecksDueFactAfterFence -- Time elapsed: 0.031 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <9b91f300-45ec-473c-b8a4-bea1041ac51f>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:56)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:40)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:34)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:297)
+	at com.gym.modules.operationscore.OperationsTest.reminderRechecksDueFactAfterFence(OperationsTest.java:57)
+
+[INFO] Running com.gym.modules.operationscore.RulesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.gym.modules.operationscore.RulesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   OperationsTest.databaseExceptionsNeverExposeSql:60 Unexpected exception type thrown, expected: <com.gym.modules.operationscore.api.Failure> but was: <org.springframework.dao.DuplicateKeyException>
+[ERROR]   OperationsTest.policyConsentUnsubscribeFrequencyAndOwnMessages:48->failCode:61 Expected com.gym.modules.operationscore.api.Failure to be thrown, but nothing was thrown.
+[ERROR]   OperationsTest.reminderRechecksDueFactAfterFence:57 expected: <null> but was: <9b91f300-45ec-473c-b8a4-bea1041ac51f>
+[ERROR]   OperationsTest.reportReadReauthorizesPrivateReference:59 expected: <1> but was: <0>
+[INFO] 
+[ERROR] Tests run: 16, Failures: 4, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.414 s
+[INFO] Finished at: 2026-11-13T23:32:56+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project operations-core: There are test failures.
+[ERROR] 
+[ERROR] See C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-b3d7-7861-b0d9-f566c8800f90\task-biz004\modules\operations-core\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,10 @@
+server:
+  address: 127.0.0.1
+gym:
+  db:
+    url: ${GYM_DB_URL}
+    username: ${GYM_DB_USERNAME}
+    password: ${GYM_DB_PASSWORD}
+    schema: gym_dev
+  iam:
+    hmac-key: ${GYM_IAM_HMAC_KEY}

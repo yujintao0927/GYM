@@ -54,3 +54,5 @@ src/auth.ts负责四路由、单飞刷新、内存Token与epoch；state.ts负责
 ## 回传与Git
 
 仅整体提交web/**与docs/deliveries/TASK-WEB001/**，不合并main。提交SHA及push结果由最终回复提供（避免报告自引用SHA）。请用户将本报告、最终SHA与工作区路径带回COORD-01聊天；本会话没有自动回传或通知。
+
+Git补充：首提交2da4b8d已推送；暂存检查发现records.ts末尾多空行，后续独立格式修正提交清理，不改写历史。最终diff检查、敏感扫描与范围检查均通过，分支设置上游成功；最终SHA见回复。

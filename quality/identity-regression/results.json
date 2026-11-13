@@ -1,0 +1,1008 @@
+{
+  "target": "e20e499",
+  "schema": "gym_dev_test_003b",
+  "cases": [
+    {
+      "case": "login WEB generation0",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "a9d244f5-489e-43fc-92ce-abcbbf11ff03",
+      "pass": true
+    },
+    {
+      "case": "generation0",
+      "pass": true
+    },
+    {
+      "case": "contexts empty grants",
+      "expected": 200,
+      "actual": 200,
+      "actualCode": null,
+      "requestId": "8fc3013b-d5f8-42b1-bc82-d022067f7bb0",
+      "pass": true
+    },
+    {
+      "case": "no grants",
+      "pass": true
+    },
+    {
+      "case": "login MINI_PROGRAM",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "9c00f6b6-e723-43ec-af52-a5494dacd44e",
+      "pass": true
+    },
+    {
+      "case": "missing credential",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "5f2877da-60ab-458f-9d58-864f0f0c1ccd",
+      "pass": true
+    },
+    {
+      "case": "missing entry",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "c1ca0376-15a7-470b-94d6-b6588a74c610",
+      "pass": true
+    },
+    {
+      "case": "missing clientKind",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "af99df93-80a1-452c-bc93-8d539e3b8323",
+      "pass": true
+    },
+    {
+      "case": "extra role",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "f224e58f-925c-45f4-b4c5-4da191bf4f91",
+      "pass": true
+    },
+    {
+      "case": "extra accountId",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "64c9d391-be25-4f23-aa45-8ba200674940",
+      "pass": true
+    },
+    {
+      "case": "extra unknown",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "dabe3230-718b-4b42-8cad-efb1be5a9f17",
+      "pass": true
+    },
+    {
+      "case": "credential kind 6",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "c196c83f-695e-45ed-bf5e-f241405c687f",
+      "pass": true
+    },
+    {
+      "case": "credential login 7",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "dda74167-966d-4e85-a8c8-0185b98a942e",
+      "pass": true
+    },
+    {
+      "case": "credential login 8",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "6f50dd67-3556-4413-ae72-91fe5e95ef20",
+      "pass": true
+    },
+    {
+      "case": "credential login 9",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "60c662d1-b91c-4bf3-bb17-556acac011e9",
+      "pass": true
+    },
+    {
+      "case": "credential proof 10",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "f5881a12-7dad-4574-a2bf-f891f4e005e1",
+      "pass": true
+    },
+    {
+      "case": "credential proof 11",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "ebd49eda-202c-4b98-a5f0-5ffd5c470164",
+      "pass": true
+    },
+    {
+      "case": "credential proof 12",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "aaf650c5-e928-45a2-9d0e-ce525229497b",
+      "pass": true
+    },
+    {
+      "case": "credential proof 13",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "2dea2ec9-4d76-4cdf-80ff-4eb78299cb4f",
+      "pass": true
+    },
+    {
+      "case": "credential proof 14",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "89ac99f5-2e89-4546-86c6-7217a057a9e6",
+      "pass": true
+    },
+    {
+      "case": "credential login 15",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "cc7f01d8-1c1c-41a5-98e2-b7648a5dd548",
+      "pass": true
+    },
+    {
+      "case": "credential kind 16",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "8c3417d6-a55e-44ca-af5b-cbe950916229",
+      "pass": true
+    },
+    {
+      "case": "invalid entry 17",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "3527b1b5-849d-4231-8c3d-109fc686ad73",
+      "pass": true
+    },
+    {
+      "case": "invalid entry 18",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "9a5cd380-8672-42cc-aa31-fc99d2e9873e",
+      "pass": true
+    },
+    {
+      "case": "invalid clientKind 19",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "1c43ea81-7057-43f3-82a6-8d24f6ede26f",
+      "pass": true
+    },
+    {
+      "case": "invalid clientKind 20",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "210e6308-1859-4012-8672-3d9e2ddeedfc",
+      "pass": true
+    },
+    {
+      "case": "invalid credential 21",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "76496f46-a1d5-4a96-bc66-dd73bc544b59",
+      "pass": true
+    },
+    {
+      "case": "key missing",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "03c10625-165a-4af1-a42a-cf2523928331",
+      "pass": true
+    },
+    {
+      "case": "key space",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "c979b797-9f86-4975-97c7-33e4fd385842",
+      "pass": true
+    },
+    {
+      "case": "key long",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "49a31f2c-641d-4c20-a7c1-bdb12bdd5166",
+      "pass": true
+    },
+    {
+      "case": "JSON broken",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "f6c0a201-43a8-4416-8427-6393f936fcc9",
+      "pass": true
+    },
+    {
+      "case": "JSON array",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "ca07d716-cc95-486d-80c8-b48b8368d7e1",
+      "pass": true
+    },
+    {
+      "case": "JSON null",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "3c5a852f-3fdc-4de4-8c6a-969902d6f7ef",
+      "pass": true
+    },
+    {
+      "case": "auth missing",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "28f33796-92e1-4751-8733-147b81a496cf",
+      "pass": true
+    },
+    {
+      "case": "auth lowercase",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "f31ef088-b8a0-4365-a4b7-524c71b36b4c",
+      "pass": true
+    },
+    {
+      "case": "auth junk",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "5f784ebc-1a6a-4fac-97df-80b34ccf5e6b",
+      "pass": true
+    },
+    {
+      "case": "auth cookie",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "AMBIGUOUS_AUTH",
+      "requestId": "f96e02b7-b372-4c70-b491-749567796fc0",
+      "pass": true
+    },
+    {
+      "case": "cookie plus bearer",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "AMBIGUOUS_AUTH",
+      "requestId": "a94d4ccb-d5bb-431f-a7d4-a25742e60f09",
+      "pass": true
+    },
+    {
+      "case": "entry merchant",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "8dc50b33-d365-4f76-84df-28155537b326",
+      "pass": true
+    },
+    {
+      "case": "entry grants merchant",
+      "pass": true
+    },
+    {
+      "case": "entry coach",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "a20e0ca5-77ea-4789-a395-ddefa573a5c2",
+      "pass": true
+    },
+    {
+      "case": "entry grants coach",
+      "pass": true
+    },
+    {
+      "case": "entry platform-admin",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "44cc11a8-3eaf-4960-a808-579ea485429b",
+      "pass": true
+    },
+    {
+      "case": "entry grants platform-admin",
+      "pass": true
+    },
+    {
+      "case": "entry platform-support",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "734224c8-0128-4d4b-a550-5bfaa8c0393b",
+      "pass": true
+    },
+    {
+      "case": "entry grants platform-support",
+      "pass": true
+    },
+    {
+      "case": "valid password 12 bytes",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "15fc5f6c-5f05-4d6a-9b7f-4cb09a78ee01",
+      "pass": true
+    },
+    {
+      "case": "valid password 72 bytes",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "f09774ca-87ec-46ef-b10f-47d414f6adc3",
+      "pass": true
+    },
+    {
+      "case": "valid password 72 UTF8 bytes",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "960de977-6ba6-4fad-b1e8-a0d75e82f7f1",
+      "pass": true
+    },
+    {
+      "case": "valid key length 1",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "3b0859e6-b4e4-4b1d-8e60-7fd1dceb4403",
+      "pass": true
+    },
+    {
+      "case": "valid key length 128",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "f2c339aa-f996-4a43-82c9-789f7f73c845",
+      "pass": true
+    },
+    {
+      "case": "refresh extra field",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "d756aeb5-6837-4181-b037-2b9e926603a4",
+      "pass": true
+    },
+    {
+      "case": "refresh missing generation",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "270fb343-ecd7-4caf-901b-d757dbcc57b4",
+      "pass": true
+    },
+    {
+      "case": "login Cookie rejected",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "AMBIGUOUS_AUTH",
+      "requestId": "bbfc3e77-fbb2-4a4f-a671-cd529e98fa36",
+      "pass": true
+    },
+    {
+      "case": "login first key",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "7802e626-6fb8-46be-86a5-746af06b73fd",
+      "pass": true
+    },
+    {
+      "case": "login receipt",
+      "expected": 409,
+      "actual": 409,
+      "actualCode": "REAUTH_REQUIRED",
+      "requestId": "7338c8c4-2bdd-4f2e-a91b-dc342868df0f",
+      "pass": true
+    },
+    {
+      "case": "login mismatch",
+      "expected": 409,
+      "actual": 409,
+      "actualCode": "IDEMPOTENCY_MISMATCH",
+      "requestId": "2e6e26ef-2ba2-4282-927f-e9bb6d8b9012",
+      "pass": true
+    },
+    {
+      "case": "refresh generation0",
+      "expected": 201,
+      "actual": 201,
+      "actualCode": null,
+      "requestId": "31b22a04-db4c-4b6d-a133-6fe66245e42d",
+      "pass": true
+    },
+    {
+      "case": "rotation expiry fixed",
+      "pass": true
+    },
+    {
+      "case": "old access rejected",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "1c7ced98-538c-4f7a-b830-d9809bf692ec",
+      "pass": true
+    },
+    {
+      "case": "refresh same key receipt",
+      "expected": 409,
+      "actual": 409,
+      "actualCode": "REAUTH_REQUIRED",
+      "requestId": "489a75d8-97f1-4cf6-be42-e009cb3d90be",
+      "pass": true
+    },
+    {
+      "case": "refresh changed generation receipt",
+      "expected": 409,
+      "actual": 409,
+      "actualCode": "IDEMPOTENCY_MISMATCH",
+      "requestId": "4d57457e-d188-4386-a29b-ea3219b0bde3",
+      "pass": true
+    },
+    {
+      "case": "refresh different key reuse",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "46cc6db0-66ad-46cc-bb15-ecfe529e2479",
+      "pass": true
+    },
+    {
+      "case": "reuse revokes access",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "de35ebad-0d91-4ba8-bea4-c80408f700d8",
+      "pass": true
+    },
+    {
+      "case": "cross session key",
+      "expected": 409,
+      "actual": 409,
+      "actualCode": "IDEMPOTENCY_MISMATCH",
+      "requestId": "b8177214-9825-4320-8fcb-5f5266e7e347",
+      "pass": true
+    },
+    {
+      "case": "generation negative",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "2c0eae89-ac7c-487f-97e3-18482292307b",
+      "pass": true
+    },
+    {
+      "case": "generation future",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "c09154b5-8539-4675-8566-2f0cf79447b4",
+      "pass": true
+    },
+    {
+      "case": "generation string",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "27e2b1df-3c5d-43c0-9286-29bd22d344c9",
+      "pass": true
+    },
+    {
+      "case": "generation boolean",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "dc2d59e2-eff3-4424-aad2-0dba8d45beb0",
+      "pass": true
+    },
+    {
+      "case": "generation float",
+      "expected": 422,
+      "actual": 422,
+      "actualCode": "INVALID_INPUT",
+      "requestId": "31f591e8-6538-4d19-83a9-eabddc6a8934",
+      "pass": true
+    },
+    {
+      "case": "cross account logout",
+      "expected": 404,
+      "actual": 404,
+      "actualCode": "RESOURCE_NOT_FOUND",
+      "requestId": "4ffb9173-86e4-49c9-927d-d50b4dd0a04d",
+      "pass": true
+    },
+    {
+      "case": "victim remains active",
+      "expected": 200,
+      "actual": 200,
+      "actualCode": null,
+      "requestId": "131c87b2-655a-4cf2-8da1-7ca3c90484d1",
+      "pass": true
+    },
+    {
+      "case": "logout",
+      "expected": 200,
+      "actual": 200,
+      "actualCode": null,
+      "requestId": "a6898e5f-0d69-4c6e-9648-4bd45d03e55a",
+      "pass": true
+    },
+    {
+      "case": "logout access",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "bf4df5ac-a1ec-4d23-8031-4d57634ea301",
+      "pass": true
+    },
+    {
+      "case": "logout refresh",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "3d966930-b282-4a75-8c19-ee310a091bf4",
+      "pass": true
+    },
+    {
+      "case": "logout repeated old bearer",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "4aa3a25b-bba3-481a-acc6-68f1c5596d10",
+      "pass": true
+    },
+    {
+      "case": "restart access persistence",
+      "expected": 200,
+      "actual": 200,
+      "actualCode": null,
+      "requestId": "bfe91140-1fac-4a9c-b741-8238c624756d",
+      "pass": true
+    },
+    {
+      "case": "restart refresh receipt",
+      "expected": 409,
+      "actual": 409,
+      "actualCode": "REAUTH_REQUIRED",
+      "requestId": "a4682aa7-fbbd-471a-85d9-e58230fc51a0",
+      "pass": true
+    },
+    {
+      "case": "restart new access",
+      "expected": 200,
+      "actual": 200,
+      "actualCode": null,
+      "requestId": "3a2a5c99-d296-424d-ac45-6750f28cb4df",
+      "pass": true
+    },
+    {
+      "case": "fixture accessExpired",
+      "pass": true
+    },
+    {
+      "case": "accessExpired contexts",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "ad28508a-1b83-4ccd-be61-77f4fedcc3dc",
+      "pass": true
+    },
+    {
+      "case": "fixture familyExpired",
+      "pass": true
+    },
+    {
+      "case": "family expiration",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "0025fcec-b922-4292-96e8-623d431f7a4c",
+      "pass": true
+    },
+    {
+      "case": "fixture epoch",
+      "pass": true
+    },
+    {
+      "case": "epoch contexts",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "dd1ed2db-06ff-4489-8862-01c416e097f4",
+      "pass": true
+    },
+    {
+      "case": "fixture closed",
+      "pass": true
+    },
+    {
+      "case": "closed proven login",
+      "expected": 403,
+      "actual": 403,
+      "actualCode": "ACCOUNT_CLOSED",
+      "requestId": "76e90369-bd04-43c6-9cc9-e99d6b3d194f",
+      "pass": true
+    },
+    {
+      "case": "closed contexts",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "42d167a6-c1ef-49a1-9bd5-468b974efc2a",
+      "pass": true
+    },
+    {
+      "case": "fixture disabled",
+      "pass": true
+    },
+    {
+      "case": "disabled credential",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "AUTHENTICATION_FAILED",
+      "requestId": "7b99b5b2-a2ed-49e1-b0aa-6dd5825c3b9c",
+      "pass": true
+    },
+    {
+      "case": "concurrent login same key",
+      "pass": true
+    },
+    {
+      "case": "concurrent refresh True",
+      "pass": true
+    },
+    {
+      "case": "concurrent refresh False",
+      "pass": true
+    },
+    {
+      "case": "concurrent reuse revocation",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "34e56b2e-47be-4445-973f-122091b83889",
+      "pass": true
+    },
+    {
+      "case": "logout refresh bounded ordering",
+      "pass": true
+    },
+    {
+      "case": "logout race final old access",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "f65fd10c-ccad-476d-a3f7-a73cd0fefdcc",
+      "pass": true
+    },
+    {
+      "case": "logout winner prevents refresh",
+      "pass": true
+    },
+    {
+      "case": "cross account mutual logout",
+      "pass": true
+    },
+    {
+      "case": "DB digest generation invariant True",
+      "pass": true
+    },
+    {
+      "case": "DB digest generation invariant False",
+      "pass": true
+    },
+    {
+      "case": "account failure 0",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "AUTHENTICATION_FAILED",
+      "requestId": "c6a62403-4757-4ab9-812b-af4f6f2a2f9d",
+      "pass": true
+    },
+    {
+      "case": "account failure 1",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "AUTHENTICATION_FAILED",
+      "requestId": "ead3d631-918d-4cc8-af6c-10b532b6fcb2",
+      "pass": true
+    },
+    {
+      "case": "account failure 2",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "AUTHENTICATION_FAILED",
+      "requestId": "0adb252d-3d40-4c10-a16a-a8cdbee8ffc4",
+      "pass": true
+    },
+    {
+      "case": "account failure 3",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "AUTHENTICATION_FAILED",
+      "requestId": "813ab857-0bd0-4983-b5f4-a1f36a2ad09c",
+      "pass": true
+    },
+    {
+      "case": "account failure 4",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "AUTHENTICATION_FAILED",
+      "requestId": "09de616a-dcde-476e-a8d5-3d844e438d7a",
+      "pass": true
+    },
+    {
+      "case": "account limit ignores XFF",
+      "expected": 429,
+      "actual": 429,
+      "actualCode": "AUTH_RATE_LIMITED",
+      "requestId": "1a9a7453-bfd5-4c0a-a26b-c6b373855fa8",
+      "pass": true
+    },
+    {
+      "case": "source failure 6",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "fad55d2e-d632-465a-ae1f-326251de82bb",
+      "pass": true
+    },
+    {
+      "case": "source failure 7",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "7894d309-8c4c-4f6f-8aaf-d3e8ecef5feb",
+      "pass": true
+    },
+    {
+      "case": "source failure 8",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "9b261110-dcb0-41a5-b1d0-3329f793b1b7",
+      "pass": true
+    },
+    {
+      "case": "source failure 9",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "65d04645-8c36-4bd0-a256-4d6375fd5606",
+      "pass": true
+    },
+    {
+      "case": "source failure 10",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "6ceb1741-41dd-48b7-a0c2-0ebe040a7ed3",
+      "pass": true
+    },
+    {
+      "case": "source failure 11",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "45ceb8f1-b639-424e-bdaa-7ebd2cc1b353",
+      "pass": true
+    },
+    {
+      "case": "source failure 12",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "28b0619d-bf4f-4c5e-92c7-6a65412a2023",
+      "pass": true
+    },
+    {
+      "case": "source failure 13",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "4faab80b-e2d9-4ac4-ac42-fba98522bc2c",
+      "pass": true
+    },
+    {
+      "case": "source failure 14",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "5dffead7-5ab6-4078-8685-7974c39baebb",
+      "pass": true
+    },
+    {
+      "case": "source failure 15",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "e0331d02-ed6c-4748-a30a-e3d337b52bb3",
+      "pass": true
+    },
+    {
+      "case": "source failure 16",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "a85d3e84-bbbd-4964-9dbe-617b6a4d9a83",
+      "pass": true
+    },
+    {
+      "case": "source failure 17",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "3db7683c-a9ac-477d-a526-748f09edc66f",
+      "pass": true
+    },
+    {
+      "case": "source failure 18",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "c5c12550-5e95-4051-b353-0d8fb41c955a",
+      "pass": true
+    },
+    {
+      "case": "source failure 19",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "bef21e8e-3c8b-4c9e-ad1c-7fbda31b1fc0",
+      "pass": true
+    },
+    {
+      "case": "source failure 20",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "0297ff70-c131-403c-88f3-ab3c07d61f7a",
+      "pass": true
+    },
+    {
+      "case": "source failure 21",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "bd698bc2-c1c3-463e-94d8-af3a05580d9e",
+      "pass": true
+    },
+    {
+      "case": "source failure 22",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "77b48aaf-e38b-496d-a362-13ac155a3c64",
+      "pass": true
+    },
+    {
+      "case": "source failure 23",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "a99be4a5-869f-4313-a1aa-9fcd50eb135b",
+      "pass": true
+    },
+    {
+      "case": "source failure 24",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "9d533530-a583-4c01-815c-e288abd54497",
+      "pass": true
+    },
+    {
+      "case": "source failure 25",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "4b833605-58d2-49ae-b004-e76b9799319f",
+      "pass": true
+    },
+    {
+      "case": "source failure 26",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "38dceecb-738e-4172-9719-c629c669a0b2",
+      "pass": true
+    },
+    {
+      "case": "source failure 27",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "ed489964-8545-44e8-a818-4a952f0c4ae4",
+      "pass": true
+    },
+    {
+      "case": "source failure 28",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "1f00e6fd-4171-4ebe-afe2-b011f76b603e",
+      "pass": true
+    },
+    {
+      "case": "source failure 29",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "21696f6d-621f-48d1-86d0-8f71be761d55",
+      "pass": true
+    },
+    {
+      "case": "source failure 30",
+      "expected": 401,
+      "actual": 401,
+      "actualCode": "SESSION_INVALID",
+      "requestId": "fa6e24a5-7d4c-4e73-b66a-f6740a9e748e",
+      "pass": true
+    },
+    {
+      "case": "source limit XFF cannot bypass",
+      "expected": 429,
+      "actual": 429,
+      "actualCode": "AUTH_RATE_LIMITED",
+      "requestId": "7cdd4009-8ede-4694-b094-0f305b21d2a3",
+      "pass": true
+    },
+    {
+      "case": "retry after bounded",
+      "pass": true
+    },
+    {
+      "case": "default health",
+      "pass": true
+    },
+    {
+      "case": "default denies POST/v1/sessions",
+      "pass": true
+    },
+    {
+      "case": "default denies POST/v1/sessions/refresh",
+      "pass": true
+    },
+    {
+      "case": "default denies GET/v1/me/contexts",
+      "pass": true
+    },
+    {
+      "case": "default denies DELETE/v1/sessions/unknown",
+      "pass": true
+    }
+  ],
+  "passed": 138,
+  "total": 138
+}

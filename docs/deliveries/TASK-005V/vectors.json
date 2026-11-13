@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "1",
+  "cases": [
+    {
+      "id": "V01",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "0",
+      "totalUnits": "12",
+      "remainingUnits": "7",
+      "expectedRefundMinor": "0",
+      "rationale": "测试夹具：零实付"
+    },
+    {
+      "id": "V02",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "10000",
+      "totalUnits": "12",
+      "remainingUnits": "0",
+      "expectedRefundMinor": "0",
+      "rationale": "测试夹具：零剩余"
+    },
+    {
+      "id": "V03",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "12345",
+      "totalUnits": "17",
+      "remainingUnits": "17",
+      "expectedRefundMinor": "12345",
+      "rationale": "测试夹具：全剩余"
+    },
+    {
+      "id": "V04",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "10000",
+      "totalUnits": "30",
+      "remainingUnits": "10",
+      "expectedRefundMinor": "3333",
+      "rationale": "测试夹具：购买20赠10，总30剩10；仅归一比例"
+    },
+    {
+      "id": "V05",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "10000",
+      "totalUnits": "12",
+      "remainingUnits": "9",
+      "expectedRefundMinor": "7500",
+      "rationale": "测试夹具：购买10赠2，总12剩9；不附到期状态"
+    },
+    {
+      "id": "V06",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "1",
+      "totalUnits": "2",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "1",
+      "rationale": "测试夹具：恰好半分向上"
+    },
+    {
+      "id": "V07",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "1",
+      "totalUnits": "3",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "0",
+      "rationale": "测试夹具：低于半分"
+    },
+    {
+      "id": "V08",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "1",
+      "totalUnits": "3",
+      "remainingUnits": "2",
+      "expectedRefundMinor": "1",
+      "rationale": "测试夹具：高于半分"
+    },
+    {
+      "id": "V09",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "5",
+      "totalUnits": "2",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "3",
+      "rationale": "测试夹具：非零整数部分加半分"
+    },
+    {
+      "id": "V10",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "10",
+      "totalUnits": "4",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "3",
+      "rationale": "测试夹具：不能整除且半分"
+    },
+    {
+      "id": "V11",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "10",
+      "totalUnits": "6",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "2",
+      "rationale": "测试夹具：不能整除且高于半分"
+    },
+    {
+      "id": "V12",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "10",
+      "totalUnits": "7",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "1",
+      "rationale": "测试夹具：不能整除且低于半分"
+    },
+    {
+      "id": "V13",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "9007199254740993",
+      "totalUnits": "3",
+      "remainingUnits": "2",
+      "expectedRefundMinor": "6004799503160662",
+      "rationale": "测试夹具：超过二进制浮点安全整数的金额"
+    },
+    {
+      "id": "V14",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "9007199254740993",
+      "totalUnits": "2",
+      "remainingUnits": "1",
+      "expectedRefundMinor": "4503599627370497",
+      "rationale": "测试夹具：大金额的精确半分"
+    },
+    {
+      "id": "V15",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-033",
+        "REQ-035"
+      ],
+      "formula": "TIME_RATIO",
+      "paidMinor": "7",
+      "totalUnits": "9007199254740993",
+      "remainingUnits": "9007199254740992",
+      "expectedRefundMinor": "7",
+      "rationale": "测试夹具：大整数单位，相差一单位"
+    },
+    {
+      "id": "V16",
+      "reqRefs": [
+        "REQ-032",
+        "REQ-034",
+        "REQ-035"
+      ],
+      "formula": "COUNT_RATIO",
+      "paidMinor": "12345",
+      "totalUnits": "17",
+      "remainingUnits": "17",
+      "expectedRefundMinor": "12345",
+      "rationale": "测试夹具：与V03相同算术，次数商品标识"
+    }
+  ]
+}

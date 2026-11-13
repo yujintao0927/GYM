@@ -1,0 +1,9 @@
+{
+  "projectname": "gym-mini",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "dist/",
+  "setting": {
+    "es6": true,
+    "minified": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/records/records"
+  ],
+  "window": {
+    "navigationBarTitleText": "健身记录",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f4f5f7"
+  }
+}

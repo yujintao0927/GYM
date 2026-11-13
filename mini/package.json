@@ -1,0 +1,17 @@
+{
+  "name": "gym-mini",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.0.0 <23"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc && node scripts/build.cjs",
+    "test": "npm run build && node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "miniprogram-api-typings": "4.0.8"
+  }
+}

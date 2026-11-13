@@ -1,0 +1,92 @@
+WARNING: A restricted method in java.lang.foreign.MemorySegment has been called
+WARNING: java.lang.foreign.MemorySegment::reinterpret has been called by org.jline.terminal.impl.ffm.FfmTerminalProvider in an unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] ------------------------< com.gym:ranking-core >------------------------
+[INFO] Building ranking-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ ranking-core ---
+[INFO] Deleting C:\Users\28795\.codex\visualizations\2026\11\13\01a1d577-1352-77d2-a543-184d98e5fb40\task-biz006\modules\ranking-core\target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ ranking-core ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ ranking-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ ranking-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d577-1352-77d2-a543-184d98e5fb40\task-biz006\modules\ranking-core\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ ranking-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ ranking-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gym.modules.rankingcore.ModuleMysqlTest
+23:45:01.029 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz006 (MySQL 26.7)
+23:45:01.094 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:45:01.143 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.032s)
+23:45:01.160 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz006`: 8
+23:45:01.164 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz006` is up to date. No migration necessary.
+RNK_EVIDENCE MySQL=26.7.0 V8-checksum=1441057216
+23:45:05.922 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz006 (MySQL 26.7)
+23:45:05.940 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:45:05.953 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:45:05.969 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz006`: 8
+23:45:05.970 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz006` is up to date. No migration necessary.
+23:45:06.755 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz006 (MySQL 26.7)
+23:45:06.772 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:45:06.792 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.010s)
+23:45:06.804 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz006`: 8
+23:45:06.805 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz006` is up to date. No migration necessary.
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.160 s -- in com.gym.modules.rankingcore.ModuleMysqlTest
+[INFO] Running com.gym.modules.rankingcore.RankingMysqlTest
+23:45:07.063 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz006 (MySQL 26.7)
+23:45:07.082 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:45:07.093 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.008s)
+23:45:07.107 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz006`: 8
+23:45:07.108 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz006` is up to date. No migration necessary.
+23:45:07.411 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz006 (MySQL 26.7)
+23:45:07.428 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:45:07.444 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.011s)
+23:45:07.459 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz006`: 8
+23:45:07.460 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz006` is up to date. No migration necessary.
+23:45:07.582 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz006 (MySQL 26.7)
+23:45:07.599 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:45:07.612 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.008s)
+23:45:07.626 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz006`: 8
+23:45:07.627 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz006` is up to date. No migration necessary.
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.839 s -- in com.gym.modules.rankingcore.RankingMysqlTest
+[INFO] Running com.gym.modules.rankingcore.RankingRulesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.gym.modules.rankingcore.RankingRulesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ ranking-core ---
+[INFO] Building jar: C:\Users\28795\.codex\visualizations\2026\11\13\01a1d577-1352-77d2-a543-184d98e5fb40\task-biz006\modules\ranking-core\target\ranking-core-0.0.1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.102 s
+[INFO] Finished at: 2026-11-13T23:45:08+08:00
+[INFO] ------------------------------------------------------------------------

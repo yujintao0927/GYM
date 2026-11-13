@@ -14,3 +14,5 @@
 e20e499已安装V1 IAM迁移于gym_dev及隔离测试库gym_dev_test_003b；据执行者和独立测试均为七IAM表加Flyway历史表，迁移重复启动可验证。先前“空库/无表”为创建时快照，不再代表当前状态。禁止重写已安装V1或清库；新模块需增量迁移及所有者协调。JDBC/Flyway警告与有限开发接受见ACC-009/RISK-013。
 
 006A数据边界补充（DEC-025）：只在gym_dev以V2新增HLT本人记录/回执表，不改已执行V1；可创建不存在的gym_dev_test_006a作隔离测试，编码中同时保留gym_dev_test_003b的IAM回归。未知表/数据先报告、不DROP库/清库，后续业务不能凭此扩大访问范围。
+
+夜间批次：006A已取消，原gym_dev_test_006a未要求创建。NIGHT001专用gym_dev_test_night001（可创建，V1+V2），NIGHT002只用原gym_dev_test_003b（V1），不连接开发gym_dev；只有NIGHT001可在gym_dev作保留V1的HLT增量验证。避免两分支不同迁移互相干扰，未知对象不自动清理。

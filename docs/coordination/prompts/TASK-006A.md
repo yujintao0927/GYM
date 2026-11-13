@@ -1,3 +1,5 @@
+> 已取消：用户2026-11-13明确取消TASK-006A，且确认从未派发。仅保留历史，不得据此开工。夜间新包见TASK-NIGHT001；范围更大，并非旧任务恢复。
+
 # TASK-006A 完整执行Prompt：三类本人记录后端闭环
 
 项目D:/GYM，origin https://github.com/yujintao0927/GYM.git。你是拟EXEC-006A，独立工作区和codex/task-006a-manual-records分支；先读实际适用AGENTS.md及最新用户规则，核对status/分支/远程/历史，回报实际路径及起点。不在共享目录切分支，不覆盖用户未提交AGENTS.md或正在产生的WEB001材料，不假称已列举全部聊天。发现同任务或共享backend占用先报告。

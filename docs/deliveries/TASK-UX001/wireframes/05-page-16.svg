@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+<title>前台进出场登记</title><desc>设计评审专用，未接真实后端</desc>
+<rect width="1200" height="1000" fill="#eee"/>
+<style>text{font-family:Microsoft YaHei,SimHei,sans-serif;fill:#222}</style>
+<text x="32" y="47" font-size="28">UX001 / 05  前台进出场登记</text>
+<text x="32" y="89" font-size="18">PAGE-16 · 设计评审专用 · 未接真实后端 · 视觉未批准 · 示例均虚构</text>
+<rect x="32" y="122" width="770" height="760" fill="white" stroke="#444"/>
+<rect x="32" y="122" width="770" height="48" fill="#ccc"/>
+<text x="48" y="153" font-size="20">GYM  /  前台进出场登记</text>
+<rect x="32" y="170" width="144" height="712" fill="#ddd"/>
+<rect x="44" y="194" width="120" height="44" fill="#aaa" stroke="#999"/>
+<text x="56" y="223" font-size="18">概览</text>
+<rect x="44" y="256" width="120" height="44" fill="#eee" stroke="#999"/>
+<text x="56" y="285" font-size="18">业务列表</text>
+<rect x="44" y="318" width="120" height="44" fill="#eee" stroke="#999"/>
+<text x="56" y="347" font-size="18">历史记录</text>
+<rect x="44" y="380" width="120" height="44" fill="#eee" stroke="#999"/>
+<text x="56" y="409" font-size="18">消息/客服</text>
+<rect x="194" y="190" width="590" height="205" fill="#fafafa" stroke="#aaa"/>
+<text x="208" y="219" font-size="20">本店核验</text>
+<rect x="204" y="232" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="254" font-size="18">身份：前台 | 当前门店：示例A店</text>
+<rect x="204" y="271" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="293" font-size="18">会员标识：[虚构输入] [核验]</text>
+<text x="208" y="332" font-size="18">跨店不可访问，不显示其他店资料</text>
+<rect x="194" y="412" width="590" height="205" fill="#fafafa" stroke="#aaa"/>
+<text x="208" y="441" font-size="20">卡与在场分列</text>
+<rect x="204" y="454" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="476" font-size="18">本店卡：期限/剩次/退款hold</text>
+<rect x="204" y="493" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="515" font-size="18">在场：未入场 / 在场</text>
+<rect x="204" y="532" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="554" font-size="18">人工原因：[必填]</text>
+<rect x="194" y="634" width="590" height="205" fill="#fafafa" stroke="#aaa"/>
+<text x="208" y="663" font-size="20">操作确认</text>
+<rect x="204" y="676" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="698" font-size="18">[确认入场] [确认离场]</text>
+<rect x="204" y="715" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="737" font-size="18">摘要：门店 / 会员 / 卡 / 原因 / 操作</text>
+<text x="208" y="776" font-size="18">首次激活与入场同事务，失败不半成</text>
+<rect x="826" y="122" width="342" height="760" fill="#ddd" stroke="#aaa"/>
+<text x="840" y="151" font-size="20">冲突与停用变体</text>
+<text x="840" y="186" font-size="18">重复入场查原结果；无在场离场冲突</text>
+<text x="840" y="241" font-size="18">409刷新重核，禁止强行覆盖</text>
+<text x="840" y="296" font-size="18">P04停用签退待批，不自定入场权</text>
+<text x="32" y="921" font-size="18">服务端逐请求校验主体、门店、资源、权益与资料授权；本图不是权限或政策批准</text>
+<text x="32" y="960" font-size="18">评审：入口是否清楚、顺序是否合理、失败及到期保留路径是否可达</text>
+</svg>

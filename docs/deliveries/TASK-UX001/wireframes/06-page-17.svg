@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+<title>商家课程预约管理</title><desc>设计评审专用，未接真实后端</desc>
+<rect width="1200" height="1000" fill="#eee"/>
+<style>text{font-family:Microsoft YaHei,SimHei,sans-serif;fill:#222}</style>
+<text x="32" y="47" font-size="28">UX001 / 06  商家课程预约管理</text>
+<text x="32" y="89" font-size="18">PAGE-17 · 设计评审专用 · 未接真实后端 · 视觉未批准 · 示例均虚构</text>
+<rect x="32" y="122" width="770" height="760" fill="white" stroke="#444"/>
+<rect x="32" y="122" width="770" height="48" fill="#ccc"/>
+<text x="48" y="153" font-size="20">GYM  /  商家课程预约管理</text>
+<rect x="32" y="170" width="144" height="712" fill="#ddd"/>
+<rect x="44" y="194" width="120" height="44" fill="#aaa" stroke="#999"/>
+<text x="56" y="223" font-size="18">概览</text>
+<rect x="44" y="256" width="120" height="44" fill="#eee" stroke="#999"/>
+<text x="56" y="285" font-size="18">业务列表</text>
+<rect x="44" y="318" width="120" height="44" fill="#eee" stroke="#999"/>
+<text x="56" y="347" font-size="18">历史记录</text>
+<rect x="44" y="380" width="120" height="44" fill="#eee" stroke="#999"/>
+<text x="56" y="409" font-size="18">消息/客服</text>
+<rect x="194" y="190" width="590" height="205" fill="#fafafa" stroke="#aaa"/>
+<text x="208" y="219" font-size="20">排期与筛选</text>
+<rect x="204" y="232" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="254" font-size="18">门店：示例A店 [团课] [私教]</text>
+<text x="208" y="293" font-size="18">日期 / 教练时段 / 容量</text>
+<text x="208" y="332" font-size="18">排课写接口及权限先细化批准</text>
+<rect x="194" y="412" width="590" height="205" fill="#fafafa" stroke="#aaa"/>
+<text x="208" y="441" font-size="20">名单与履约</text>
+<text x="208" y="476" font-size="18">课程 / 时段 / 容量 / 预约状态</text>
+<rect x="204" y="493" width="570" height="31" fill="white" stroke="#bbb"/>
+<text x="208" y="515" font-size="18">[查看名单] [签到] [取消预约]</text>
+<text x="208" y="554" font-size="18">私教期限/次包分开，扣次轨迹可查</text>
+<rect x="194" y="634" width="590" height="205" fill="#fafafa" stroke="#aaa"/>
+<text x="208" y="663" font-size="20">下单前政策明示</text>
+<text x="208" y="698" font-size="18">商家收费/取消政策版本及接受确认</text>
+<text x="208" y="737" font-size="18">未明示不扣取消费；退款按平台公式</text>
+<text x="208" y="776" font-size="18">取消预约不等于订单退款→PAGE-19</text>
+<rect x="826" y="122" width="342" height="760" fill="#ddd" stroke="#aaa"/>
+<text x="840" y="151" font-size="20">异常变体</text>
+<text x="840" y="186" font-size="18">满员/时段冲突409刷新，不报成</text>
+<text x="840" y="217" font-size="18">功</text>
+<text x="840" y="272" font-size="18">取消与签到竞争查询当前结果</text>
+<text x="840" y="327" font-size="18">宽限停用动作表P04未批不自行放</text>
+<text x="840" y="358" font-size="18">行</text>
+<text x="32" y="921" font-size="18">服务端逐请求校验主体、门店、资源、权益与资料授权；本图不是权限或政策批准</text>
+<text x="32" y="960" font-size="18">评审：入口是否清楚、顺序是否合理、失败及到期保留路径是否可达</text>
+</svg>

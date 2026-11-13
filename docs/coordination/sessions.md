@@ -60,3 +60,5 @@ TASK-WEB001拟EXEC-WEB001、TASK-MINI001拟EXEC-MINI001尚未创建/绑定，等
 EXEC-003B：用户本次报告原聊天，工具ID未知；工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4c4-dfef-7920-9f27-8b643f826afe/task-003b，分支codex/task-003b-local-sessions，e20e499已回传、ACC-009验收、08143f4集成。
 
 EXEC-MINI001：前次用户报告原聊天，工具ID未知；工作区C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4d4-297c-7480-b407-6d1d136aae01/task-mini001；分支codex/task-mini001-user-foundation，77ac49d待验收，尚未独立验收或集成。用户暂缓安装开发者工具，环境验证继续受阻，不反复催安装；真实认证联调仍需材料。WEB001无新回传，不推断运行或完成。
+
+2026-11-13用户确认WEB001仍在运行，沿用原聊天，不重复派发。006A拟EXEC-006A，未创建/未绑定，完整Prompt已保存，等待人工派发；可与Web并行，backend/迁移唯一由006A负责。MINI工具安装仍暂缓。

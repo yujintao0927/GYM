@@ -129,3 +129,5 @@ ACC-007验收QA001的97REQ/31用例/8门槛规划，ACC-008验收UX001设计包�
 ## 已实现身份子集（ACC-009）
 
 TASK-003B代码backend/src/main/java/com/gym/identity/、V1 IAM及e20e499/08143f4已验收，验证LocalSessionTest/MysqlMigrationTest及verify-local-process.ps1。REQ-002/006/013/014/093仅获得本地账号会话基础，不是完整跨端/员工/门店/生产认证验收；父需求仍未全部完成。MINI001仅交付待验收，工具/真机和真实联调未通过。
+
+TASK-006A将承接REQ-011/012/040/041/045/079/092的本人手动记录与历史基础，仅本地开发CRUD；AI/趋势/营养计算等仍独立未完成。计划/契约已保存，暂无实现/验收，97编号不变。

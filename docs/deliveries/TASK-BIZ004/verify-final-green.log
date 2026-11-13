@@ -5,7 +5,7 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 
 [INFO] Scanning for projects...
 [INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
-[INFO] 
+[INFO]
 [INFO] ----------------------< com.gym:operations-core >-----------------------
 [INFO] Building operations-core 0.0.1
 [INFO]   from pom.xml
@@ -13,29 +13,29 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 [INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
 [WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
 [WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
-[INFO] 
+[INFO]
 [INFO] --- clean:3.5.0:clean (default-clean) @ operations-core ---
 [INFO] Deleting C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-b3d7-7861-b0d9-f566c8800f90\task-biz004\modules\operations-core\target
-[INFO] 
+[INFO]
 [INFO] --- resources:3.5.0:resources (default-resources) @ operations-core ---
 [INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] 
+[INFO]
 [INFO] --- compiler:3.15.0:compile (default-compile) @ operations-core ---
 [INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
 [INFO] Recompiling the module because of changed source code.
 [INFO] Compiling 11 source files with javac [debug parameters release 21] to target\classes
-[INFO] 
+[INFO]
 [INFO] --- resources:3.5.0:testResources (default-testResources) @ operations-core ---
 [INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-b3d7-7861-b0d9-f566c8800f90\task-biz004\modules\operations-core\src\test\resources
-[INFO] 
+[INFO]
 [INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ operations-core ---
 [INFO] Recompiling the module because of changed dependency.
 [INFO] Compiling 2 source files with javac [debug parameters release 21] to target\test-classes
-[INFO] 
+[INFO]
 [INFO] --- surefire:3.5.6:test (default-test) @ operations-core ---
 [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
-[INFO] 
+[INFO]
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
@@ -57,12 +57,12 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 [INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.758 s -- in com.gym.modules.operationscore.OperationsTest
 [INFO] Running com.gym.modules.operationscore.RulesTest
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.gym.modules.operationscore.RulesTest
-[INFO] 
+[INFO]
 [INFO] Results:
-[INFO] 
+[INFO]
 [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] 
+[INFO]
+[INFO]
 [INFO] --- jar:3.5.1:jar (default-jar) @ operations-core ---
 [INFO] Building jar: C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-b3d7-7861-b0d9-f566c8800f90\task-biz004\modules\operations-core\target\operations-core-0.0.1.jar
 [INFO] ------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 # 交付与验收记录
 
-当前没有业务交付和业务验收。TASK-001见ACC-001，TASK-002返工复验见ACC-003，均为文档验收；TASK-003A等待人工派发。协调文档建立只代表管理基础建立，不代表任何业务功能完成。
+当前没有业务交付和业务验收。TASK-001见ACC-001，TASK-002返工复验见ACC-003，均为文档验收；TASK-003A已通过ACC-006，TASK-UX001/QA001等待人工派发。协调文档建立只代表管理基础建立，不代表任何业务功能完成。
 
 ## 统一回报格式
 
@@ -68,3 +68,14 @@
 - 结论：设计包交付已验收，集成73b6250；OD-01认证、OD-02授予权、OD-03保留、OD-04未结交易/再注册、OD-05会话参数仍未批准，不因设计通过而授权实现。无构建、认证、数据库、跨端业务或故障注入测试。
 - 下游：003B至少等待003A验收、必要OD决定和实际接库前数据库名明确；003D不要求003A等待。健康同步撤权/资金与权益影响版本仍需对应模块集成验证。
 - 材料：[报告](../deliveries/TASK-003D/report.md)、[模型](../deliveries/TASK-003D/identity-model.md)、[候选会话契约](../deliveries/TASK-003D/session-contracts.md)、[未决](../deliveries/TASK-003D/open-decisions.md)。
+
+## ACC-006：TASK-003A后端基础工程验收通过（2026-11-13）
+
+- 流转：用户回传→待验收→COORD-01实际代码审查及独立运行→已验收。最终交付374a4e9d9ca636fd8da392d4a48396629fe0da91，实际起点9f268b7（不是用678b873比较而混入已有协调文档）。
+- 实际差异：相对起点仅16文件，backend/**、自身验证交付及根.gitignore；没有业务/数据库/旧交付或总台账修改。POM固定Boot4.1.2、Java21，官方Wrapper3.3.4固定Maven3.10.0并配置分发/引导校验。
+- 代码审查：只GET /actuator/health允许，其余denyAll；关闭Basic/表单/登出和请求缓存，无状态会话；禁用自动开发用户，CSRF仍保留；health不暴露组件/详情/probes；无JDBC或DataSource配置。六个测试使用真实上下文、随机端口和HTTP请求，不只匹配配置文本。
+- 独立构建：执行工作区backend，进程JAVA_HOME=D:/java_environment，运行 .\mvnw.cmd -B -o clean verify，退出0，6 tests/0 failures/0 errors/0 skipped，成功打包；实测java为21.0.2。离线避免不必要依赖下载，不跳过测试。
+- 独立新进程：运行已审阅probe.ps1 -JavaHome D:/java_environment，退出0，25检查=4次最小health200+21次拒绝403；PID48920仅绑定随机loopback端口，finally已停止本次进程。脚本同时检查无默认密码/JDBC连接日志；未将其当网络抓包证据。
+- 执行者工作区干净、与origin任务分支0/0；ls-remote完整SHA匹配；git diff --check 9f268b7 374a4e9通过。构建依赖及运行清单无JDBC/MySQL/Flyway。
+- 结论：通过限定服务骨架/默认拒绝验收，不代表认证、业务授权隔离、数据库、会员或支付可用。旧JDK补丁仅用于本地验证，不是商业运行时批准；后续发布需复核运行时。
+- 集成40c006c，正常无冲突合并保留任务历史，无修改实现。实际报告：[TASK-003A](../deliveries/TASK-003A/report.md)。003B仍需认证/授予等决定与接库信息，未自动解锁。

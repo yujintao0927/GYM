@@ -1,0 +1,5 @@
+backend/target/
+backend/.tools/
+backend/.mvn/wrapper/apache-maven-*/
+backend/application-local.yml
+backend/.env

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gym
+  autoconfigure:
+    # No authentication exists in this foundation; do not create a development user.
+    exclude: org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+      show-components: never
+      probes:
+        enabled: false

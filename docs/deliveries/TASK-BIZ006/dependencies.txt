@@ -64,4 +64,3 @@ The following files have been resolved:
    com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test -- module android.json (auto)
    org.springframework:spring-test:jar:7.0.10:test -- module spring.test [auto]
    org.xmlunit:xmlunit-core:jar:2.11.0:test -- module org.xmlunit [auto]
-

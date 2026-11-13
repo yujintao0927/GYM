@@ -1,0 +1,6 @@
+Source commit: 65ea074056a302c1f875ad597277422c781ac7e4
+Branch: codex/task-biz006-ranking-core
+Baseline: b3ce453e92cc378a25dac27f7d1591eb01274baf
+Source and tests: 20 passed, real gym_dev_test_biz006, clean verify exit 0.
+The subsequent docs commit records this SHA and removes trailing whitespace only.
+Source push: succeeded; upstream origin/codex/task-biz006-ranking-core configured. No merge to main.

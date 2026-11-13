@@ -5,7 +5,7 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 
 [INFO] Scanning for projects...
 [INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
-[INFO] 
+[INFO]
 [INFO] ------------------------< com.gym:ranking-core >------------------------
 [INFO] Building ranking-core 0.0.1
 [INFO]   from pom.xml
@@ -13,23 +13,23 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 [INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
 [WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
 [WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
-[INFO] 
+[INFO]
 [INFO] --- resources:3.5.0:resources (default-resources) @ ranking-core ---
 [INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] 
+[INFO]
 [INFO] --- compiler:3.15.0:compile (default-compile) @ ranking-core ---
 [INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
 [INFO] Nothing to compile - all classes are up to date.
-[INFO] 
+[INFO]
 [INFO] --- resources:3.5.0:testResources (default-testResources) @ ranking-core ---
 [INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d577-1352-77d2-a543-184d98e5fb40\task-biz006\modules\ranking-core\src\test\resources
-[INFO] 
+[INFO]
 [INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ ranking-core ---
 [INFO] Recompiling the module because of changed source code.
 [INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
 [INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
+[ERROR] COMPILATION ERROR :
 [INFO] -------------------------------------------------------------
 [ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d577-1352-77d2-a543-184d98e5fb40/task-biz006/modules/ranking-core/src/test/java/com/gym/modules/rankingcore/ModuleMysqlTest.java:[32,201] �Ҳ�������
   ����:   ���� correct(java.lang.String,java.lang.String,int,java.time.Instant,java.lang.String)
@@ -44,7 +44,7 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
   ����: �� Region
 [ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d577-1352-77d2-a543-184d98e5fb40/task-biz006/modules/ranking-core/src/test/java/com/gym/modules/rankingcore/RankingMysqlTest.java:[27,733] �Ҳ�������
   ����: �� Region
-[INFO] 5 errors 
+[INFO] 5 errors
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [ERROR] BUILD FAILURE
@@ -52,7 +52,7 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 [INFO] Total time:  6.984 s
 [INFO] Finished at: 2026-11-13T23:30:01+08:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:testCompile (default-testCompile) on project ranking-core: Compilation failure: Compilation failure: 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:testCompile (default-testCompile) on project ranking-core: Compilation failure: Compilation failure:
 [ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d577-1352-77d2-a543-184d98e5fb40/task-biz006/modules/ranking-core/src/test/java/com/gym/modules/rankingcore/ModuleMysqlTest.java:[32,201] �Ҳ�������
 [ERROR]   ����:   ���� correct(java.lang.String,java.lang.String,int,java.time.Instant,java.lang.String)
 [ERROR]   λ��: ����Ϊcom.gym.modules.rankingcore.application.VisitService�ı��� s
@@ -67,9 +67,9 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 [ERROR] /C:/Users/28795/.codex/visualizations/2026/11/13/01a1d577-1352-77d2-a543-184d98e5fb40/task-biz006/modules/ranking-core/src/test/java/com/gym/modules/rankingcore/RankingMysqlTest.java:[27,733] �Ҳ�������
 [ERROR]   ����: �� Region
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

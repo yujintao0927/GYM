@@ -1,50 +1,103 @@
-# TASK-003B 执行检查记录（未完成，等待兼容策略）
+# TASK-003B 交付报告
 
-EXEC-003B；2026-11-13。当前不是完整业务交付，也未进入待验收；用户在本聊天明确选择「先由 COORD-01 确认数据库兼容策略」，暂停后续迁移及业务编码。没有自动回传工具，请用户将本报告、最终完整提交 SHA 和材料路径带回 COORD-01。
+EXEC-003B，2026-11-13。状态：完整本地账号会话实现已完成验证，提交后仅进入待验收；不自授通过、不解锁其他模块、不合并 main。请用户将本报告、完整最终 SHA 与材料路径人工带回 COORD-01；本聊天没有自动派发或回传工具。
 
-## 输入与工作区
+## 输入、起点与工作区
 
-- 业务 5f5e091；TASK-002 c781088；TASK-003D 2ef475e；TASK-003A 374a4e9；实际以当前 main 的 DEC-018–020、local-development.md、TASK-003B Prompt 和完整计划为执行依据。
-- fetch 后本地 main 与 origin/main 均为 `3c649a1a290b696684980ddfd6c93a26e3efcf84`，包含本轮计划、Prompt、数据库配置及已集成输入。
-- 独立分支 `codex/task-003b-local-sessions`。
-- 独立工作区 `C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4c4-dfef-7920-9f27-8b643f826afe/task-003b`。
-- origin `https://github.com/yujintao0927/GYM.git`；共享 D:/GYM 保持 main，未覆盖用户改动。
-- 创建前核对 status、分支、历史、worktree list 和 tasks/sessions 登记，未发现同任务已开工分支/工作区。未全局检索其他聊天，不能证明其他聊天不存在。
-- 项目及父目录未发现 AGENTS.md；适用用户提供规则和用户目录下 `.codex/AGENTS.md`。凭据仅在进程内读取，报告及探测源码不含凭据。
+业务5f5e091；TASK-002验收稿c781088、TASK-003D身份草案2ef475e、TASK-003A已验收374a4e9及当前DEC-018–020。创建前核对共享仓库status/分支/origin/历史、任务/会话登记、全部工作区与远端分支，未发现003B已开工分支或工作区；无法全局检索其他聊天，不声称证明其不存在。
 
-## 已执行与真实结果
+- 实际起点：`3c649a1a290b696684980ddfd6c93a26e3efcf84`，创建时 fetch 后 main=origin/main，含本轮DEC、local-development.md、完整计划及Prompt。
+- 独立工作区：`C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4c4-dfef-7920-9f27-8b643f826afe/task-003b`。
+- 分支：`codex/task-003b-local-sessions`；origin `https://github.com/yujintao0927/GYM.git`。共享 D:/GYM 未切换分支、未改用户文件。
+- 本轮按用户补充，完整读取共享目录更新后的计划；当时共享 main 为 `2b48c1e272ca3ab30d1b626b9aabb5b20a973f44`。登录响应增加 generation=0，测试与运行说明同步；未重开任务或改协调文件。
+- 适用规则为用户全局规则及用户 `.codex/AGENTS.md`；项目与父目录未发现其他AGENTS.md。凭据仅从规则在进程中提取，不进源码、参数或材料。
 
-1. 普通沙箱 exec 两次因 `CreateProcessSecurityEnvironment failed (HRESULT = 0x80070020)` 未能启动；改用获准的沙箱外执行成功。未修改机器安全配置。
-2. 设置当前进程 JAVA_HOME 为既有 `D:/java_environment`；java -version 确认为 OpenJDK 21.0.2。原 Wrapper 保持 Maven 3.10.0，Boot 保持 4.1.2。
-3. `backend/mvnw.cmd -B clean verify`：Maven BUILD SUCCESS，六项 FoundationBoundaryTest，Failures 0 / Errors 0 / Skipped 0，22.886 秒。覆盖默认无 DataSource、最小 health、伪造身份/未定义路径拒绝、无开发登录。
-4. 读取本机已解析 Boot 4.1.2 BOM：flyway.version=12.4.0，mysql.version=9.7.0。没有升级框架或覆盖 BOM。
-5. 首次 dependency:get 的未引号 -D 参数被 PowerShell 解析，Maven 报 Invalid Metadata Requests，失败。改用带引号参数修正：`dependency:get '-Dartifact=org.flywaydb:flyway-mysql:12.4.0' '-Dtransitive=true'` 和 `dependency:get '-Dartifact=com.mysql:mysql-connector-j:9.7.0' '-Dtransitive=true'` 均 BUILD SUCCESS。Flyway 解析过程有 Redgate MavenFeed 401 警告，所需公开产物最终由 Central 解析成功，不属于当前网络阻断。
-6. 容器只读查询再次返回 SELECT VERSION() = 26.7.0；两个目标 schema 的 information_schema.tables 聚合无行，即未发现已有表。此次未创建测试库，未执行 DDL/DML。
-7. 附件 CompatibilityProbe.java 使用上述固定 JDBC/Flyway：JDBC 成功查询 26.7.0；Flyway info() 成功，识别 MySQL 26.7，提示 gym_dev.flyway_schema_history 尚不存在。
-8. 探测明确产生警告：`Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.` 随后打印 FLYWAY_INFO_OK，Java 进程成功结束。它只证明连接与 info 可执行，不能证明 V1 迁移、锁/事务或业务兼容性。
-9. 向用户呈现「保留警告继续隔离库验证」与「先由 COORD-01 确认」两项，用户明确选择后者。后续数据库写入与业务编码等待该策略，未擅自更换驱动、服务或降低校验。
+## 兼容策略及执行过程
 
-## 兼容性依据与待协调问题
+此前检查提交 `dda9197fe3f5dc50e444b4d3d1c0d36c30caee45` 已推送，记录只读探测成功与Flyway版本警告。当时用户选择先由COORD-01确认；本轮用户明确要求执行者自行确认，解除该等待。
 
-官方资料核查于 2026-11-13：
+执行决定：保持既有MySQL服务和固定Boot BOM，保留警告、保持验证开启，以真实隔离库迁移/事务/并发及开发库新进程验证为本任务有限兼容证据。不得把这些结果表述为厂商认证或生产批准。实际SELECT VERSION()再次为26.7.0，事务隔离REPEATABLE-READ；未改服务器配置。
 
-- [Flyway MySQL 文档](https://documentation.red-gate.com/fd/mysql-277579322.html)列出的 Verified Versions 为 5.7、8.0、9.4，与实际固定版本警告一致。
-- [Connector/J 9.7 手册](https://downloads.mysql.com/docs/connector-j-en.pdf)说明支持 MySQL 8.0 及以上；实际连接成功。不能把连接成功等同迁移和事务验证成功。
+解析结果：Java21（实际JDK21.0.2）、Boot4.1.2、Wrapper Maven3.10.0；spring-jdbc/spring-tx **7.0.10**、Connector/J **9.7.0**、flyway-core/flyway-mysql **12.4.0**，新增依赖全部由固定BOM管理，无LATEST/SNAPSHOT和未管理依赖。
 
-请 COORD-01 明确：是否允许保留 Flyway 未验证数据库版本警告，并继续在指定隔离库执行迁移/事务/并发实测；如需其他兼容策略，请明确批准的版本和环境变更边界。执行者没有要求或实施数据库服务降级，也不把警告描述成已证实不兼容或硬连接失败。
+Flyway实际保留警告：MySQL26.7高于其已验证最高9.4；JDBC连接、V1安装/校验、重复启动及并发均通过。官方边界参照[Flyway MySQL](https://documentation.red-gate.com/fd/mysql-277579322.html)和[Connector/J 9.7手册](https://downloads.mysql.com/docs/connector-j-en.pdf)。本报告区分「实测可用」和「厂商已验证」。
 
-## 文件、接口及数据变更
+## 文件摘要与实现
 
-本检查提交仅包含本目录的 report.md 与 CompatibilityProbe.java。探测是独立 Java 只读诊断程序，使用当前进程 GYM_DB_PASSWORD；密码不进入参数。未新增生产依赖、API、安全配置、V1 或 IAM 表。V1 迁移所有权仍留 TASK-003B，后续实施前须再次核对 main 与数据库对象归属。
+- backend/pom.xml：仅新增BOM管理的JDBC、驱动、Flyway core/mysql；未引入H2，无框架整体升级。
+- backend/src/main/java/com/gym/identity/local/：BCrypt cost12、规范化/验证、安全随机Token与HMAC；逐账号Provisioner和隐藏输入/显式安全stdin CLI。
+- identity/persistence/：显式本地DataSource/schema及未知表守卫、Flyway迁移、JdbcTemplate和事务封装。默认profile不建立这些Bean。
+- identity/session/：账号栅栏下的登录、幂等回执、轮换、上下文、本人退出、摘要限流和持久化撤销。
+- identity/api/：四路由、无秘密错误信封、no-store、仅精确路由/方法的本地安全链及CSRF例外；其他路径仍走原默认拒绝。Cookie明确拒绝。
+- FoundationSecurityConfiguration：仅增加Web应用条件，使CLI非Web进程可启动，原六项测试未删除或削弱。
+- application-local-dev.yml、V1__iam_local_sessions.sql、两个identity测试类；README及tools/verify-local-process.ps1。
+- 本目录CompatibilityProbe.java保留前次只读探测工具。根.gitignore未修改；已有backend/.tools/和target/忽略规则涵盖私有key、缓存及日志。
 
-未运行 Flyway migrate/clean，未创建/删除数据库或覆盖表，未改用户容器。探测连接的 gym_dev 没有迁移历史表；gym_dev_test_003b 未创建，故本轮没有隔离库迁移、事务或并发证据。
+## 接口与数据变更
 
-## 未完成项与下游边界
+成功信封维持data/requestId/mode=SIMULATED/serverTime/contractVersion=0.1。authnSource仅LOCAL_DEV，entry/clientKind不授角色，多余role/accountId等字段422；错误不含凭据、SQL、堆栈或账号存在性。
 
-CLI 逐账号配置、四路由、BCrypt/HMAC/Token 摘要持久化、限流、刷新重放/并发、关闭与 epoch 夹具、启动 profile、新进程业务闭环和重启持久化全部尚未实现或验证。没有先失败后通过的业务测试，不宣称 TDD 业务门槛达成。
+| 路由 | 实际行为 |
+| --- | --- |
+| POST /v1/sessions | LOCAL_PASSWORD，必填Idempotency-Key；201返回sessionId/sessionToken/expiresAt/refreshToken/refreshExpiresAt/authnSource/**generation:0**；同键同体409 REAUTH_REQUIRED，异体409 IDEMPOTENCY_MISMATCH，无重复会话 |
+| POST /v1/sessions/refresh | 必填refreshToken/generation/Idempotency-Key；201同sessionId、新Token及generation+1；不延长7天家族；旧access立即失效；同键重试409，旧叶异键重放401并撤家族及access |
+| GET /v1/me/contexts | 有效Bearer；200 accountId、空staffScopes/entitlementSources、asOf；匿名/伪造/过期/撤销/CLOSED/epoch不符401 |
+| DELETE /v1/sessions/{id} | 有效本人Bearer，200 sessionId/revoked；他人404，旧Bearer401；撤目标会话及家族，不能以回执绕过鉴权 |
 
-本轮只验证原骨架以及只读连接；SIMULATED/LOCAL_DEV 身份、员工/平台授予、权益、真实微信短信、生产 Cookie、账号注销和经济模块均无新增实现。UX001/QA001不受本记录影响，未修改其材料。协调台账、需求及旧交付只读，未自授验收或解锁下游。
+登录名仅ASCII字母/数字/._-、长3–64，归一化小写；密码12–72 UTF-8字节、BCrypt12。32随机字节opaque access/refresh，仅SHA256摘要入库；幂等请求指纹使用私有至少32字节随机HMAC key，不保存无密钥口令指纹或原始秘密。登录及刷新幂等分别按账号/操作约束，不允许同账号跨会话复用刷新key绕过。
 
-## 提交与回传
+CLI仅创建普通本地账号，不开放注册HTTP，不内置共享密码或默认账号，不授员工/平台权限。无console须明确--password-stdin，由父进程/受保护stdin提供秘密；密码不支持参数，不输出明文或摘要。私有HMAC key保存于已忽略文件并收紧ACL，应用重启复用该key。
 
-本报告按独立分支提交，提交后推送 origin 并设置上游；实际完整 SHA 与推送结果由本聊天最终回复给出，避免在提交内容中自引用提交 SHA。该提交是受阻检查记录，不是完整账号会话交付；不合并 main、不改写历史、不强推。用户应回传本报告及完整 SHA 给 COORD-01 确认兼容策略后再继续原任务。
+V1仅新增本任务七张IAM表：iam_account、iam_local_credential、iam_session、iam_refresh_family、iam_refresh_node、iam_login_receipt、iam_auth_failure，加Flyway自有历史表。账号/凭据与Token摘要唯一；节点(family_id,generation)唯一；登录回执(account_id,key_digest)唯一；外键均为IAM内部。
+
+主锁序Account→Session→Family→Node。限流先来源、再账号摘要锁；来源不信任X-Forwarded-For。预期拒绝提交失败计数/重放撤销；数据库异常回滚全事务。账号摘要5失败/15分钟，来源30失败/15分钟，429带Retry-After。
+
+gym_dev创建前已核实空表，本轮新增IAM V1及随机新进程验证账号/会话；测试库原先不存在，按授权创建utf8mb4/utf8mb4_unicode_ci。最终两库均只有上述八张表，V1历史success=1；未DROP、清库、覆盖未知表或执行Flyway clean。测试只删除当前私有HMAC对应的已知来源限流行，随机隔离账号/会话保留为本任务夹具，不操作开发库记录。
+
+## 测试：失败、定位、修正及最终结果
+
+| 命令/阶段 | 退出与事实 |
+| --- | --- |
+| 原始 mvnw.cmd -B clean verify | 0；原六项通过，默认无DB |
+| 早期dependency:get未引号-D参数 | 非0；PowerShell拆分参数导致metadata错误，修正引号后解析成功，不是依赖不存在 |
+| migration初始红测 | 1；Expected size1, actual0；安装V1后通过 |
+| sessions初始红测 | 导入错误修正后运行，因无实现ClassNotFound及预期状态失败；随后真实实现令业务用例转绿 |
+| 首轮全测/并发复现 | 1；同键并发登录201/503而非201/409，重复6轮捕获CannotAcquireLockException；定位限流INSERT IGNORE共享锁升级，改为直接取得写锁的upsert，并锁内当前读回执 |
+| 刷新限流红测 | 1；预期429实际401；补齐来源失败计数及Retry-After后转绿 |
+| 三项边界红测 | 1；跨代复用key预期409实际201、非ASCII预期422实际401、跨账号互相退出预期404/404实际503/404；分别修正幂等检查、原始ASCII校验、所有权判定先于他人Session锁 |
+| 独立审查两项红测 | 1；旧叶异键被后代key遮挡预期401实际409、同账号跨会话刷新key碰撞预期409实际201；修正撤销优先级和账号级键约束，审查者复核无新增严重问题 |
+| **最终 mvnw.cmd -B clean verify** | **0，BUILD SUCCESS；28项，Failures0/Errors0/Skipped0：Foundation6、LocalSession21（含重复并发）、Migration1** |
+| dependency:tree固定includes | 0；版本如上，无覆盖BOM |
+| tools/verify-local-process.ps1最终执行 | **0**；四组检查全部PASS，见下 |
+
+28项测试以真实MySQL与随机端口HTTP运行，涵盖CLI子进程创建/重复及无秘密输出、散列/摘要、未知/禁用凭据防枚举、来源与账号限流、伪造身份/字段、本人/他人退出、CLOSED与epoch、可控Clock的30分钟/7天边界、同键/异键并发刷新、登录竞争、退出刷新竞争及重复迁移。没有H2、mock数据库或通过跳过测试制造成功。
+
+独立新进程最终输出仅有：
+
+```text
+CLI_FRESH_PROCESS=PASS
+HTTP_LOGIN_CONTEXT_ROTATION_OLD_ACCESS_REJECT=PASS
+RESTART_PERSISTENCE_RECEIPT_LOGOUT_REFRESH_REJECT=PASS
+DEFAULT_PROFILE_NEW_PROCESS_BOUNDARY=PASS
+```
+
+该脚本实际执行打包CLI创建随机账号→local-dev登录generation0→本人上下文→刷新→旧access401→停止自身应用并重启→新access和登录幂等回执仍有效→退出→refresh401→默认profile新进程最小health及登录/上下文拒绝。所有自己启动的进程均在finally停止，未停止用户Docker或其他服务。
+
+进程验证早期3次在默认health解析处失败，前序业务/重启检查均已通过；诊断显示PowerShell将vendor JSON内容视为字节数组、逐字节ConvertFrom-Json产生Object[]，改为UTF-8解码后最终全流程退出0。这是验证脚本修正，未削弱health断言或修改health响应。
+
+完整私有日志位于backend/.tools/final-clean-verify.log、.tools/dependency-versions.log和.tools/evidence/，不提交；运行日志位于忽略的target/。报告仅保留脱敏事实，HTTP示例与运行步骤见backend/README.md，Token使用占位符。
+
+## 风险、边界与下游
+
+- MySQL26.7超出Flyway厂商最高已验证版本的警告仍存在；本次实测证明的是该组合上的本任务功能和事务行为，不是所有SQL特性或生产负载兼容承诺。
+- 本地Bearer开发方案不等于Web生产Cookie；CSRF仅精确本地路由例外，未来Cookie需单独设计/验收。当前无连接池，限流同来源会串行，适用于本地开发，未承诺生产吞吐。
+- CLOSED/epoch通过隔离夹具验证，无账号注销API、经济处置、健康撤权或清理实现；无真实微信/短信、公共注册/找回/合并、员工或平台授予、收费退款、前端。OD-02/03/04未批分支未实现。
+- staffScopes/entitlementSources为空体现模块尚未实现；后续授权与权益所有者仍须独立集成，不能把上下文或entry当长期授权。
+- 幂等/失败记录的生产保留与清理政策尚未批准；本地测试夹具不清库。HMAC key需持续安全保管；服务运行在loopback，尚无生产TLS/密钥托管方案。
+- UX001、QA001继续独立；本任务未修改其目录、总台账、需求或旧交付。后续由COORD-01验收、决定集成与下游安排。
+
+## Git交付
+
+本轮按完整账号会话闭环暂存、提交和推送原任务分支；代码、迁移、测试、运行说明及本报告同一提交。首次上游已由前次检查提交设置，本轮普通push，无强推、改写历史或合并main。最终完整SHA及push结果在本聊天最终回复给出，可用 `git rev-parse HEAD` 与远端分支核对，避免提交内容自引用其SHA。
+
+本报告为待验收材料；用户需人工带回COORD-01，不声称已自动通知。

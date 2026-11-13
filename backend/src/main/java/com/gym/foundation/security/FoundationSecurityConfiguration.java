@@ -9,6 +9,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration(proxyBeanMethods = false)
+@org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication
 public class FoundationSecurityConfiguration {
     @Bean
     public SecurityFilterChain foundationFilterChain(HttpSecurity http) throws Exception {

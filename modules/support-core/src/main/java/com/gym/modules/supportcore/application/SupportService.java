@@ -87,4 +87,3 @@ public class SupportService {
  });}
  public byte[] download(Context c,String attachmentId){return tx.execute(s->{context(c);valid(attachmentId,36);var r=db.queryForList("select ticket_id from sup_attachment where id=?",attachmentId);if(r.isEmpty())fail(404,"NOT_FOUND");var t=load((String)r.getFirst().get("ticket_id"),false);access(c,t,"attachment.read",true);return db.queryForObject("select content from sup_attachment where id=?",byte[].class,attachmentId);});}
 }
-

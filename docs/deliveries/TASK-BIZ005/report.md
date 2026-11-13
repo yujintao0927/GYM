@@ -6,7 +6,7 @@ Baseline `b3ce453e92cc378a25dac27f7d1591eb01274baf`, includes DEC-027/PAR-BIZ/ta
 
 Branch `codex/task-biz005-support-core`.
 Worktree `C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-d18a-7692-bb45-547c3d4e618a/task-biz005`.
-Final complete commit SHA supplied in chat (self-referencing report cannot contain its own SHA). Remote sync pending final push; initial proxy query failed, direct GitHub443 query also failed. No main merge.
+Final complete commit SHA supplied in chat (self-referencing report cannot contain its own SHA). Implementation commit `9cbf80d489544306b6ee5a4ba6ab1ac586b60f11` successfully pushed with upstream; initial proxy query and direct GitHub443 query failed, later authorized push succeeded. Final documentation/whitespace follow-up SHA supplied in chat. No main merge.
 
 Inputs: requirements.md; coordination README/decisions/tasks/sessions/questions-risks/requirements-trace/local-development; frozen business-module-ports-v1; PAR-BIZ; TASK-002 domain/contracts/states/permissions/scenarios/report; TASK-QA001 strategy/risk cases; backend POM and existing MySQL guard read-only. No trade money formula implementation in support-core.
 

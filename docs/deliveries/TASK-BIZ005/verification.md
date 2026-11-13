@@ -30,3 +30,4 @@ SQL SHA256: B9AA96D522F0CD2AC55723DEA7C64A82117FFCAF5BB5BE4ED8071CCA32D4394E. In
 Warnings retained: MySQL26.7 newer than Flyway verified9.4, Maven optional repository metadata401, Mockito/JDK dynamic agent warning. No validation disabled; no production compatibility guarantee.
 
 Real provider IAM/store/trade transactions not tested; all external ports are explicit test-source fixtures. See contract.md for I/U/L gates and revocation fencing requirement.
+Git evidence: initial staged diff-check identified Maven log trailing spaces and two EOF blank lines. Removed whitespace without changing executable code; final staged diff-check required to exit0 before handoff.

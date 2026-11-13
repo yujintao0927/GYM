@@ -134,7 +134,3 @@ class MysqlSupportTest {
   assertEquals(0,jdbc.queryForObject("select count(*) from sup_receipt where actor_id=?",Integer.class,actor));
  }
 }
-
-
-
-

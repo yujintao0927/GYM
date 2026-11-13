@@ -21,5 +21,3 @@ public final class MerchantRepository {
  public static long n(Map<String,Object> r,String key){return ((Number)r.get(key)).longValue();}
  private static Instant time(Map<String,Object> r,String key){return r.get(key)==null?null:Instant.parse((String)r.get(key));}
 }
-
-

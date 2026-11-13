@@ -15,6 +15,3 @@ public final class MerchantPorts {
  public static AuthorizationPort denyAll(){return (a,b,c,d,e)->Decision.DENY;}
  public static GrantPolicy unapprovedGrantPolicy(){return new GrantPolicy(){public Decision mayGrant(String a,Grant g){return Decision.DENY;}};}
 }
-
-
-

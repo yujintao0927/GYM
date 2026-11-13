@@ -22,4 +22,3 @@ public final class MerchantDatabase {
   f.migrate(); return f;
  }
 }
-

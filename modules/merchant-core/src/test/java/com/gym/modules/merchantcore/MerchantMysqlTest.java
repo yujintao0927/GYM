@@ -160,13 +160,3 @@ class MerchantMysqlTest {
   finally{db.execute("DROP TABLE "+table);}
   assertEquals(0,MerchantDatabase.migrate(ds).migrate().migrationsExecuted);
  }}
-
-
-
-
-
-
-
-
-
-

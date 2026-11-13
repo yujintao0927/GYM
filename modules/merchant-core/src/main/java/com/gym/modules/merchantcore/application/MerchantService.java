@@ -110,8 +110,3 @@ public final class MerchantService implements StoreDirectory {
   if(m==null||m.status()==null||m.status()==PolicyStatus.UNAPPROVED||(m.status()==PolicyStatus.CONFIGURED_FIXTURE&&!allowFixturePolicies))throw new MerchantFailure(422,"POLICY_UNAPPROVED");
   if(m.id()==null||!m.id().matches("[A-Za-z0-9._-]{1,64}")||m.version()<1)throw new MerchantFailure(422,"POLICY_UNAPPROVED");return m;
  }}
-
-
-
-
-

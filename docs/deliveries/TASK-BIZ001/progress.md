@@ -18,3 +18,5 @@ Final: fixed policy provenance/fixture runtime isolation — fixturePolicyCannot
 Final: minor (deferred): compressed source formatting; no runtime behavior change, subsequent maintenance may format.
 Final: Ruling: trusted StoreDirectory/currentStaffDecision reads intentionally have no HTTP actor parameter — frozen provider signatures require trusted in-process adapters, no public HTTP exists — integration must preserve that trust boundary.
 Final verification: clean verify exit0, 27 tests (21 actual MySQL), no skipped; checksum -407201789. Source artifact class major65, runtime22.0.1. Private credential scan clean. Shared main remained b3ce453 with user's untracked AGENTS/WEB001 materials untouched.
+Ruling: use this allowed delivery progress.md as executing-plans ledger rather than extra skill scratch — user file scope forbids unrelated paths — auxiliary skill scripts are not directly reusable, evidence is retained here.
+Final whitespace gate: initial staged logs contained Maven trailing spaces; normalized only line-end whitespace/EOF blank lines; SQL untouched. Final baseline diff check clean.

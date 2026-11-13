@@ -5,7 +5,7 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 
 [INFO] Scanning for projects...
 [INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
-[INFO] 
+[INFO]
 [INFO] -------------------< com.gym.modules:merchant-core >--------------------
 [INFO] Building merchant-core 0.0.1
 [INFO]   from pom.xml
@@ -13,25 +13,25 @@ WARNING: Restricted methods will be blocked in a future release unless native ac
 [INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
 [WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
 [WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
-[INFO] 
+[INFO]
 [INFO] --- resources:3.5.0:resources (default-resources) @ merchant-core ---
 [INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] 
+[INFO]
 [INFO] --- compiler:3.15.0:compile (default-compile) @ merchant-core ---
 [INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
 [INFO] Nothing to compile - all classes are up to date.
-[INFO] 
+[INFO]
 [INFO] --- resources:3.5.0:testResources (default-testResources) @ merchant-core ---
 [INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\src\test\resources
-[INFO] 
+[INFO]
 [INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ merchant-core ---
 [INFO] Recompiling the module because of changed source code.
 [INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
-[INFO] 
+[INFO]
 [INFO] --- surefire:3.5.6:test (default-test) @ merchant-core ---
 [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
-[INFO] 
+[INFO]
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
@@ -102,15 +102,15 @@ org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
 
 [INFO] Running com.gym.modules.merchantcore.ServiceTermTest
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.gym.modules.merchantcore.ServiceTermTest
-[INFO] 
+[INFO]
 [INFO] Results:
-[INFO] 
-[ERROR] Failures: 
+[INFO]
+[ERROR] Failures:
 [ERROR]   MerchantMysqlTest.outboxFailureRollsBackSourceAuditAndReceipt:77 Unexpected exception type thrown, expected: <com.gym.modules.merchantcore.api.MerchantFailure> but was: <org.springframework.jdbc.UncategorizedSQLException>
 [ERROR]   MerchantMysqlTest.scopeSnapshotSurvivesCallerMutationDuringPolicy:92 expected: <0> but was: <1>
-[INFO] 
+[INFO]
 [ERROR] Tests run: 17, Failures: 2, Errors: 0, Skipped: 0
-[INFO] 
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [ERROR] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
@@ -118,13 +118,13 @@ org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
 [INFO] Finished at: 2026-11-13T23:35:24+08:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project merchant-core: There are test failures.
-[ERROR] 
+[ERROR]
 [ERROR] See C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-43e1-71c1-8069-975dca2032de\task-biz001\modules\merchant-core\target\surefire-reports for the individual test results.
 [ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

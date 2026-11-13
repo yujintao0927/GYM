@@ -11,4 +11,3 @@ public final class MerchantApi {
  public record Store(String id,String merchantId,String name,boolean deleted,Instant end,Instant graceEnd,long version){}
  public record Grant(String id,String merchantId,String accountId,Role role,Set<String> stores,boolean revoked,long version){public Grant{stores=Set.copyOf(stores);}}
 }
-

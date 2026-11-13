@@ -1,0 +1,7 @@
+Final command: backend/mvnw.cmd -B clean verify
+Exit code: 0
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.645 s -- in com.gym.foundation.FoundationBoundaryTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+[INFO] Total time:  05:06 min
+[INFO] Finished at: 2026-11-13T19:25:48+08:00

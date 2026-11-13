@@ -230,3 +230,24 @@ NIGHT002关联REQ-002/013/014/093基础认证与安全，及QA-019/029：只编�
 验收分别进行：每项需完整范围、有效测试、版本/命令结果、未完成和模拟/真实边界、Git提交/推送和报告；NIGHT001检查CRUD/目标/体测、所有者隔离、V1校验和与V2、重启/并发；NIGHT002检查工具确有新断言/重放/并发证据，不把重复旧28测试当独立审查。完整Prompt为prompts/TASK-NIGHT001.md和TASK-NIGHT002.md，计划plans/NIGHT-BATCH.md。
 
 正常结束条件：范围交付和必要验证完成后提交，不等待八小时；有阻塞时记录问题，继续同任务独立可做部分，不能擅自猜未批规则或扩到其他任务。没有定时唤醒/自动调度能力；用户醒来带报告回本聊天独立验收。
+
+## PAR-BIZ 当前任务契约（覆盖旧大任务的模块实施归属）
+
+[批次入口](parallel-dispatch.md)／[实施计划](plans/PAR-BIZ.md)／[端口与数据所有权](contracts/business-module-ports-v1.md)；依据DEC-027。下列均是待开始/等待人工派发；负责人拟EXEC-同号，尚未绑定新聊天/工作区，无提交、交付或验收结论。不是已派发。每份Prompt自包含具体需求编号/范围/输入/验证/Git回报，下面共同字段与逐项字段一起构成任务记录。
+
+共同目标：每聊天一次交付一个较完整业务模块的实际代码、MySQL持久化、事务与领域测试、精确接口说明和报告。前置输入为业务5f5e091、领域c781088、技术批准678b873及本批DEC-027/冻结端口；实际起点必须含本批文档的main并由执行者回报SHA，不等待其他在途模块。后端接口/模块实际提供方仍缺，当前只测试显式fixture；未批政策无运行时默认。排除共享backend/root构建/现有V1/V2、前端、其他模块、真实外部渠道及生产上线。
+
+共同交付：自己的modules目录和docs/deliveries/任务号/**，独立POM、迁移、API/应用/领域/JDBC/端口代码与测试，report.md及contract/verification/集成说明。验收M层：真实本库MySQL、权限/归属隔离、幂等并发/状态边界/故障回滚、重复迁移/重连持久化，报告精确未完成/模拟边界。验证使用现有Wrapper -f模块POM clean verify，另有范围/敏感/diff检查；没有真实MySQL证据不能通过。提交按完整单元，专属分支push不上main。COORD-01实际查diff/重放证据后才验收，执行者完成仅待验收。I/U/L另设验证门槛。
+
+| 任务/负责人候选 | 目标与业务边界 | 允许代码范围 / SQL / 测试库 | 分支 / 完整Prompt | 接口/验收重点 |
+| --- | --- | --- | --- | --- |
+| TASK-BIZ001 / EXEC-BIZ001 | 商家门店员工、授权和门店服务状态；不自授平台管理员 | modules/merchant-core/**；V3 mch_；gym_dev_test_biz001 | codex/task-biz001-merchant-core；[Prompt](prompts/TASK-BIZ001.md) | Authorization/StoreDirectory提供方；范围子集、撤授、门店归属/服务边界；未知GrantPolicy拒绝 |
+| TASK-BIZ002 / EXEC-BIZ002 | 卡、独立权益、订单/模拟付款、退款闭环；不接真实渠道或猜日卡 | modules/trade-core/**；V4 trd_；gym_dev_test_biz002 | codex/task-biz002-trade-core；[Prompt](prompts/TASK-BIZ002.md) | Rights/Trade唯一写者；005V16金额夹具、退款hold/回调/UNKNOWN和消费竞争、独立来源 |
+| TASK-BIZ003 / EXEC-BIZ003 | 团课、私教、商家已接受取消政策与履约；不重写订单退款 | modules/booking-core/**；V5 bkg_；gym_dev_test_biz003 | codex/task-biz003-booking-core；[Prompt](prompts/TASK-BIZ003.md) | Rights/Trade消费者fixture；末席、时段重叠/扣次/取消竞争、端口失败 |
+| TASK-BIZ004 / EXEC-BIZ004 | 器械报修、经营投影、站内提醒及召回规则；不发真实短信微信 | modules/operations-core/**；V6 ops_；gym_dev_test_biz004 | codex/task-biz004-operations-core；[Prompt](prompts/TASK-BIZ004.md) | 事件消费者/只读事实端口；统计去重、精确/估算区分、待定规则不发送 |
+| TASK-BIZ005 / EXEC-BIZ005 | 客服投诉证据私有附件、升级处置与申诉轨迹；不自定处罚/操纵退款 | modules/support-core/**；V7 sup_；gym_dev_test_biz005 | codex/task-biz005-support-core；[Prompt](prompts/TASK-BIZ005.md) | 附件鉴权/依赖事实；ID越权、文件失败、幂等审计、未批ActionPolicy不执行 |
+| TASK-BIZ006 / EXEC-BIZ006 | 出入场、模拟手环、有效日/区域排名与申诉；不接真实设备或默认阈值 | modules/ranking-core/**；V8 rnk_/vis_；gym_dev_test_biz006 | codex/task-biz006-ranking-core；[Prompt](prompts/TASK-BIZ006.md) | Rights消费者、Visit权威；首次入场/重复/同日并列、自愿参与、无精确位置、PENDING_POLICY |
+
+并行依据：输入及边界锁定、目录/SQL/测试库独占，不互相编译依赖；fixture仅解耦模块验证，不取代实际集成。下游解锁：相关模块M验收+NIGHT001验收后，COORD-01为统一服务装配/实际授权/跨模块事务和端到端测试派单一I层责任方；U层需逐页批准及对应API，不能现在让所有聊天改backend公共文件。传统TASK-003/004/005/007/008的完整需求并未因此已实现或取消。
+
+现有夜间状态更新：根据用户当前“正在运行”语境及已发现独立worktree，NIGHT001/NIGHT002登记执行中；原“等待人工派发”是准备时历史状态。尚无交付/验收，不能据worktree存在推断实时进程或完成。WEB001继续原聊天，无新交付；006A仍已取消。

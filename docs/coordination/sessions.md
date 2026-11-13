@@ -66,3 +66,15 @@ EXEC-MINI001：前次用户报告原聊天，工具ID未知；工作区C:/Users/
 ## 夜间派发与取消登记
 
 用户明确006A尚未派发并取消，故无执行会话需要中断，不再领取该编号。NIGHT001/002拟两个新工作聊天，未实际创建/派发，等待用户睡前人工粘贴各完整Prompt；分支/目录/数据库独占见tasks.md。WEB001原聊天继续，MINI环境验证仍等待用户安装。不得把这两个新任务称作已在后台自动运行。
+
+## 2026-11-13 PAR-BIZ绑定与去重更新
+
+COORD-01为协调文档唯一维护者；工具无用户新聊天调度能力。本批TASK-BIZ001–006均拟EXEC-同号，等待用户按[六份Prompt](parallel-dispatch.md)各建一个聊天，未绑定真实threadId/worktree，无自动回传。不要把材料已保存当实际派发。
+
+既有工作区核对（用户当前语境执行中；目录存在不是实时进程或交付证明）：
+
+- EXEC-WEB001：C:/Users/28795/.codex/visualizations/2026/11/13/01a1d4d3-cd1a-7ad3-89d8-7a5a613de6f5/task-web001；codex/task-web001-user-foundation；仅原范围。
+- EXEC-NIGHT001：C:/Users/28795/.codex/visualizations/2026/11/13/01a1d560-5e3e-72a3-a240-82ce0c273768/task-night001；codex/task-night001-health-foundation；backend/V2。
+- EXEC-NIGHT002：C:/Users/28795/.codex/visualizations/2026/11/13/01a1d561-11c1-7681-b6d1-9aafb192d8b9/task-night002；codex/task-night002-identity-regression；quality/identity-regression。
+
+不重复派发以上任务。006A已取消；MINI001保持原聊天待验收及BLOCKED_ENV，按用户要求不反复检查工具安装。六个新聊天交付须显示report.md、完整SHA和实际工作区，请用户带回COORD-01独立验收。

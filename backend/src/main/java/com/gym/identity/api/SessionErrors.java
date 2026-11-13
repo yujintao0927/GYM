@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
-@RestControllerAdvice(assignableTypes=SessionController.class) @Profile("local-dev")
+@RestControllerAdvice(assignableTypes={SessionController.class,com.gym.health.HealthController.class}) @Profile("local-dev")
 public class SessionErrors {
  @ExceptionHandler(SessionFailure.class) public ResponseEntity<?> failure(SessionFailure error){
   var response=ResponseEntity.status(error.status).cacheControl(CacheControl.noStore());if(error.retryAfter>0)response.header("Retry-After",Long.toString(error.retryAfter));

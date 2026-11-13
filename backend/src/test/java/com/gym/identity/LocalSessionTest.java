@@ -17,7 +17,7 @@ import tools.jackson.databind.json.JsonMapper;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT, properties={
- "gym.db.url=${GYM_TEST_DB_URL}","gym.db.schema=gym_dev_test_003b"})
+ "gym.db.url=${GYM_TEST_DB_URL}","gym.db.schema=gym_dev_test_night001"})
 @ActiveProfiles("local-dev")
 class LocalSessionTest {
  @Value("${local.server.port}") int port;
@@ -132,7 +132,7 @@ class LocalSessionTest {
   String name="cli_"+UUID.randomUUID().toString().replace("-","");
   for(int attempt=0;attempt<2;attempt++){
    var builder=new ProcessBuilder(System.getProperty("java.home")+"/bin/java","-cp",System.getProperty("java.class.path"),"com.gym.identity.local.LocalAccountCli",name,"--password-stdin");
-   builder.environment().put("GYM_DB_URL",MysqlMigrationTest.url());builder.environment().put("GYM_DB_SCHEMA","gym_dev_test_003b");builder.redirectErrorStream(true);
+   builder.environment().put("GYM_DB_URL",MysqlMigrationTest.url());builder.environment().put("GYM_DB_SCHEMA","gym_dev_test_night001");builder.redirectErrorStream(true);
    var process=builder.start();try(var input=process.outputWriter()){input.write(PASSWORD+"\n");}
    String output=new String(process.getInputStream().readAllBytes(),java.nio.charset.StandardCharsets.UTF_8);assertThat(process.waitFor()).isEqualTo(attempt==0?0:1);assertThat(output).doesNotContain(PASSWORD,"$2a$","jdbc:mysql","Exception");
   }

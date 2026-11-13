@@ -93,6 +93,11 @@ public class SessionService {
   var a=account((String)lookup.get("account_id"));var s=session((String)lookup.get("id"));
   if(!active(a,s)||!digest.equals(s.get("access_digest"))||clock.millis()>=n(s,"access_expires_at"))throw invalid();return s;
  }
+ /** Called only inside the caller's transaction; holds Account then Session locks until completion. */
+ public String authenticatedHealthActor(String bearer){
+  if(!org.springframework.transaction.support.TransactionSynchronizationManager.isActualTransactionActive())throw new IllegalStateException("Transaction required");
+  return (String)authenticate(bearer).get("account_id");
+ }
  public Map<String,Object> contexts(String bearer){return r.transaction(()->{var s=authenticate(bearer);return Map.of("accountId",s.get("account_id"),"staffScopes",List.of(),"entitlementSources",List.of(),"asOf",clock.instant().toString());});}
  public Map<String,Object> logout(String bearer,String id){return r.transaction(()->{
   var actor=authenticate(bearer);var target=r.row("select account_id from iam_session where id=?",id);

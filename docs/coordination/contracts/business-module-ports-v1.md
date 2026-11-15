@@ -40,3 +40,9 @@ TradePort：createOrder(product/policy snapshot,beneficiary,mode,key)及query/re
 ## 验收分层
 
 M=模块业务+真实本模块MySQL/事务/权限端口/测试；I=真实提供方与统一服务集成；U=获批UI后的前端与跨端闭环；L=资质渠道/部署上线。当前只派M层。模块M通过不代表I/U/L通过，消费者fixture模拟与真实提供方必须分别报告。后端/前端入口未接通就不能把需求标已完成。
+
+## 2026-11-16迁移和验收补记（DEC-028）
+
+V1–V8登记保持，原脚本发布后不可改写。V9追加预留给trade-core业务消费身份/期限补偿等必要修复；V10给ranking-core资格/状态等必要修复。没有SQL变更时不造空迁移，其余模块新增版本需先协调。未来统一迁移列表按实际提交新增，不局限旧段落的V1–V8。
+
+本轮不增运行时政策：显式测试源码fixture注入符合M约定，不额外强制每模块同样构造开关；实际IAM/授权/策略适配不得把fixture当批准。业务consume的businessKey应跨actor/请求key保持同一业务唯一，request key/CAS不替代持久业务幂等。自愿参榜关闭仍需本人身份/权限，但不能被付费资格或权益依赖不可用阻止。

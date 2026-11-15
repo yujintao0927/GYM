@@ -22,3 +22,7 @@ e20e499已安装V1 IAM迁移于gym_dev及隔离测试库gym_dev_test_003b；据�
 六个新模块库仅用自己测试schema，用户已授权项目库创建，读取本地适用规则获取连接配置不落盘凭据：merchant-core=gym_dev_test_biz001/V3/mch_；trade-core=gym_dev_test_biz002/V4/trd_；booking-core=gym_dev_test_biz003/V5/bkg_；operations-core=gym_dev_test_biz004/V6/ops_；support-core=gym_dev_test_biz005/V7/sup_；ranking-core=gym_dev_test_biz006/V8/rnk_与vis_。
 
 本轮协调者仅登记预留，尚未创建这些库或执行迁移；执行者只可创建自己的不存在测试库并显式本模块locations，禁止连接gym_dev、003b/night001及其他模块测试库。已有未知对象先报告，不DROP/clean/清库，不改V1/V2。池建议每模块<=4、单测试JVM/有界并发，不改全局MySQL/占共享服务端口。模块脚本放自己的src/main/resources/db/modules/<name>/，不自动加载入主服务。未来统一迁移与事务装配另行验证。
+
+## 2026-11-16验收补验
+
+COORD-01创建并保留gym_dev_test_coord_night001_20261116，仅空库最终V1/V2 Flyway首迁移与校验，无业务账号/正文写入；V1=-2038134310、V2=-1419392502、首次2、重复0、6 STORED DECIMAL。无repair/clean/drop，不能为了复验删除保留库。night001、003b、biz003各自原测试库只写随机合成夹具，未操作gym_dev。Java21.0.2实测通过，原MySQL26.7/Flyway最高验证9.4警告保留。V9/V10预留见DEC-028，尚未执行或创建相应变更。

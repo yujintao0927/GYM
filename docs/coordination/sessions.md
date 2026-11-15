@@ -78,3 +78,18 @@ COORD-01为协调文档唯一维护者；工具无用户新聊天调度能力。
 - EXEC-NIGHT002：C:/Users/28795/.codex/visualizations/2026/11/13/01a1d561-11c1-7681-b6d1-9aafb192d8b9/task-night002；codex/task-night002-identity-regression；quality/identity-regression。
 
 不重复派发以上任务。006A已取消；MINI001保持原聊天待验收及BLOCKED_ENV，按用户要求不反复检查工具安装。六个新聊天交付须显示report.md、完整SHA和实际工作区，请用户带回COORD-01独立验收。
+
+## 2026-11-16已回传交付及负责人绑定
+
+用户实际回传NIGHT001/002、BIZ001–006，已核git worktree/HEAD/远端，对应EXEC原聊天均已绑定，不再标等待首次派发。夜间两项及BIZ003已验收，BIZ001/002/004/005/006返工（返回Prompt仅保存，等待人工带回原聊天，无新线程）。
+
+| EXEC/任务 | 独立worktree（C:/Users/28795/.codex/visualizations/2026/11/13/之后） | 当前交付完整SHA |
+| --- | --- | --- |
+| EXEC-BIZ001 | 01a1d576-43e1-71c1-8069-975dca2032de/task-biz001 | c3aa33db7ef431f94ed98c9fb9800b29dea07cba |
+| EXEC-BIZ002 | 01a1d576-6ab3-7c50-a328-517be290017d/task-biz002 | d2fb2adc5473218ee4dd01e55719722e02aa16e7 |
+| EXEC-BIZ003 | 01a1d576-8e5e-7e31-8054-c8f1dfa127a0/task-biz003 | e874dbaa001da6a6578ba79776bbd8c0ae9c636b |
+| EXEC-BIZ004 | 01a1d576-b3d7-7861-b0d9-f566c8800f90/task-biz004 | 2676dc952f7e73a6243a91e8fe0e539d3adc27bd |
+| EXEC-BIZ005 | 01a1d576-d18a-7692-bb45-547c3d4e618a/task-biz005 | 8f2637122535c01c5333847b82fc8853945fe9f7 |
+| EXEC-BIZ006 | 01a1d577-1352-77d2-a543-184d98e5fb40/task-biz006 | 3203bfc18600d1993e344be3cc809a5be90dddde |
+
+NIGHT001/002工作区见原登记，源SHA分别075b6ec1b6aabaae75032c5f0f5c5fde1aee2742、c9ca499aedbe7e862aca967dd1fed56ccedb8e18。工作区/原分支保留，不清理。只读审查子代理是本协调聊天的审查工具，未冒充这些用户可见执行聊天，未修改执行者源码/库。WEB001实际worktree HEAD已前进但没有本轮交付回传，不能据此自动验收；未碰其共享未跟踪材料。

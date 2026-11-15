@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-16",
+  "sources": {
+    "NIGHT001": "075b6ec1b6aabaae75032c5f0f5c5fde1aee2742",
+    "NIGHT002": "c9ca499aedbe7e862aca967dd1fed56ccedb8e18",
+    "BIZ001": "c3aa33db7ef431f94ed98c9fb9800b29dea07cba",
+    "BIZ002": "d2fb2adc5473218ee4dd01e55719722e02aa16e7",
+    "BIZ003": "e874dbaa001da6a6578ba79776bbd8c0ae9c636b",
+    "BIZ004": "2676dc952f7e73a6243a91e8fe0e539d3adc27bd",
+    "BIZ005": "8f2637122535c01c5333847b82fc8853945fe9f7",
+    "BIZ006": "3203bfc18600d1993e344be3cc809a5be90dddde"
+  },
+  "night001": {
+    "java": "21.0.2",
+    "maven": "3.10.0",
+    "cleanVerify": {
+      "exit": 0,
+      "tests": 40,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "processProbeExit": 0,
+    "freshSchema": "gym_dev_test_coord_night001_20261116",
+    "freshMigrations": 2,
+    "repeatMigrations": 0,
+    "generatedDecimals": 6,
+    "migrationChecksums": {
+      "1": -2038134310,
+      "2": -1419392502
+    },
+    "merge": "e435e8c8e1ef038a09d82b5d42857dba9e4a5ba4"
+  },
+  "night002": {
+    "testedBackend": "e20e499",
+    "packageExit": 0,
+    "packageSkippedOriginalTests": true,
+    "selfTests": 7,
+    "selfTestExit": 0,
+    "httpMysqlPassed": 138,
+    "httpMysqlTotal": 138,
+    "httpMysqlExit": 0,
+    "evidenceCheckExit": 0,
+    "merge": "b3a8f323895163296949964595cdb5fc73448fb3"
+  },
+  "businessModules": {
+    "BIZ003": {
+      "java": "21.0.2",
+      "cleanVerifyExit": 0,
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "realMySQLSchema": "gym_dev_test_biz003",
+      "acceptance": "M only; I/U/L pending",
+      "merge": "9ccf187c6703305dd8a1d4d4631b068b81b9c765"
+    },
+    "BIZ001_002_004_005_006": {
+      "independentTestsRerun": false,
+      "review": "independent static source review plus coordinator verification; see per-task records",
+      "acceptance": "rework; do not merge"
+    }
+  },
+  "notes": [
+    "Private logs remain outside repository; no credentials/tokens copied.",
+    "One initial coordinator invocation used invalid HMAC encoding; corrected probe environment, source unchanged, full clean verify rerun passed.",
+    "No clean/repair/drop performed by coordinator. New fresh schema intentionally retained.",
+    "Merged relevant code trees equal tested source commits. Fixed-baseline identity tool has not been retargeted to new health backend."
+  ]
+}

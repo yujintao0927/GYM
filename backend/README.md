@@ -16,7 +16,7 @@
 
 ## 构建与真实数据库测试
 
-测试要求显式 `GYM_TEST_DB_URL=jdbc:mysql://localhost:3306/gym_dev_test_003b`；该隔离库必须按任务授权预先创建。测试复用上述 DB 用户/密码，并要求 HMAC key；不会回退到开发 URL。URL/schema 守卫仅允许两个指定库，集成测试只允许隔离库。没有数据库配置时测试明确失败，不跳过、不使用 H2。
+测试要求显式 `GYM_TEST_DB_URL=jdbc:mysql://localhost:3306/gym_dev_test_night001`；该隔离库必须按任务授权预先创建。测试复用上述 DB 用户/密码，并要求 HMAC key；不会回退到开发 URL。URL/schema 守卫仅允许两个指定库，集成测试只允许隔离库。没有数据库配置时测试明确失败，不跳过、不使用 H2。
 
 ```powershell
 cd backend
@@ -58,3 +58,9 @@ IAM 锁顺序 Account→Session→Family→Node；认证失败限流写入先锁
 在已有开发环境中执行 `./tools/verify-local-process.ps1`。脚本使用打包 CLI 新进程创建独立随机测试账号，在 gym_dev 留下本任务 IAM 验证记录；执行登录→上下文→刷新→旧access拒绝→重启→新access/幂等回执持久化→退出→刷新拒绝，再以默认 profile 启动新进程验证 health 和拒绝边界。仅输出检查标签，Token/密码留在内存；finally 只停止自身进程。脚本不清库，日志位于忽略的 target/。
 
 生产 Cookie、微信短信、公共注册/找回/合并、员工与平台授予、会员/健康/账号注销均未实现。后续模块仍需独立批准和验收，不能根据空 scopes 当作已完成业务权限。
+
+## NIGHT001 health foundation
+
+Local-dev only: records and measurements POST/list/detail/PATCH/DELETE; goal GET/PUT/DELETE. No membership or staff override. Existing frontend remains mock. Numeric payload strings are canonical; V2 also stores generated DECIMAL(10,3) projections. Deletion removes body and numeric values; receipts contain only keyed metadata and cannot restore deleted content. Health exceptions roll back the entire transaction, including anticipated rejections. IAM keeps its independent defensive-write semantics.
+
+Contract: docs/deliveries/TASK-NIGHT001/openapi.json and usage.md. After private environment injection and build, run `python tools/verify-health-process.py` from backend. Set JAVA_HOME, GYM_TEST_DB_URL to the exact night001 URL, GYM_DB_USERNAME/GYM_DB_PASSWORD, GYM_IAM_HMAC_KEY. This script starts/stops only its own Java processes and uses only night001; do not run the old gym_dev probe for this task. Synthetic account/receipt fixtures remain in the test database. Never clean the database.

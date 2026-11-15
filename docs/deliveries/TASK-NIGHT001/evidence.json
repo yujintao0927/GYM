@@ -1,0 +1,68 @@
+{
+  "command": "Maven 3.10.0 -B verify",
+  "exitCode": 0,
+  "suites": [
+    {
+      "name": "com.gym.foundation.FoundationBoundaryTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.gym.health.HealthValidationTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.gym.identity.HealthFoundationTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.gym.identity.LocalSessionTest",
+      "tests": "21",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.gym.identity.MysqlMigrationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "totalTests": 40,
+  "processProbe": {
+    "exitCode": 0,
+    "database": "gym_dev_test_night001",
+    "checks": [
+      "packaged CLI",
+      "two actors",
+      "four categories",
+      "filter and cursor",
+      "application restart persistence",
+      "foreign GET PATCH DELETE denied",
+      "CAS",
+      "deleted replay 404",
+      "weight goal",
+      "default profile denial"
+    ]
+  },
+  "migration": {
+    "versions": [
+      "1",
+      "2"
+    ],
+    "repeatExecuted": 0,
+    "V1SourceChanged": false,
+    "V2LocalUnpublishedRefinement": true,
+    "finalV2FirstMigrationOnEmptySchemaVerified": false
+  }
+}

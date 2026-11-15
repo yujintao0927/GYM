@@ -69,3 +69,7 @@ TASK-003A基础工程已通过ACC-006并合并40c006c：只公开最小health，
 ## 当前可并行派发（PAR-BIZ）
 
 新增[六份完整模块编码Prompt](parallel-dispatch.md)：商家权限、卡交易退款、团课私教、器械经营、客服投诉、出入场排行榜；配套[冻结端口](contracts/business-module-ports-v1.md)、[实施计划](plans/PAR-BIZ.md)及DEC-027。当前仅等待人工派发，没有代建新聊天。保留原WEB001/NIGHT001/NIGHT002；006A已取消、MINI001待验收且工具/真机受阻。M模块测试和I/U/L完整业务分别验收。
+
+## 2026-11-16 组织者接任入口
+
+最新用户交付接收与组织者职责见[COORD-02交接](handoffs/COORD-02.md)，新空白聊天使用[启动Prompt](prompts/COORD-02-START.md)。八项回传已保存，尚未独立验收；本文旧“未派发”叙述为历史状态，不代表最新回传。

@@ -7,7 +7,15 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d560-5e3e-72a3-a240-82ce0c273768/task-night001/docs/deliveries/TASK-NIGHT001/report.md",
     "status": "待验收；最终V2缺空库首次迁移证据",
     "executor_claim": "执行者报告40测试及双账号/分页/重启通过；本地V2曾修正，必须核对迁移历史/checksum，禁止直接repair或覆盖旧迁移。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "已验收（固定受测本地子范围）",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-NIGHT001.md",
+      "acceptance": "ACC-010",
+      "merge": "e435e8c8e1ef038a09d82b5d42857dba9e4a5ba4"
+    }
   },
   {
     "task": "TASK-NIGHT002",
@@ -17,7 +25,15 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d561-11c1-7681-b6d1-9aafb192d8b9/task-night002/docs/deliveries/TASK-NIGHT002/report.md",
     "status": "待验收",
     "executor_claim": "执行者报告真实HTTP/MySQL并发重启138/138、工具自测7/7；固定backend e20e499，不构成全面安全结论。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "已验收（固定受测本地子范围）",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-NIGHT002.md",
+      "acceptance": "ACC-011",
+      "merge": "b3a8f323895163296949964595cdb5fc73448fb3"
+    }
   },
   {
     "task": "TASK-BIZ001",
@@ -27,7 +43,14 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-43e1-71c1-8069-975dca2032de/task-biz001/docs/deliveries/TASK-BIZ001/report.md",
     "status": "M层待验收",
     "executor_claim": "执行者报告27测试含21MySQL；Java22编译target21，尚无JDK21实际运行；模块级事务锁性能与内部可信目录边界待复核。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "返工；返回Prompt待人工带回原聊天",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-BIZ001.md",
+      "prompt": "docs/coordination/prompts/REV-BIZ001-01.md"
+    }
   },
   {
     "task": "TASK-BIZ002",
@@ -37,7 +60,14 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-6ab3-7c50-a328-517be290017d/task-biz002/docs/deliveries/TASK-BIZ002/report.md",
     "status": "部分交付，完整任务未完成",
     "executor_claim": "执行者报告26测试，计次权益/模拟交易子范围；期限卡生命周期、持久化补偿、通用消息投递未完；V4不可改写；分页过滤可能空页需游标继续。真实提供方集成另属I层。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "返工；返回Prompt待人工带回原聊天",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-BIZ002.md",
+      "prompt": "docs/coordination/prompts/REV-BIZ002-01.md"
+    }
   },
   {
     "task": "TASK-BIZ003",
@@ -47,7 +77,15 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-8e5e-7e31-8054-c8f1dfa127a0/task-biz003/docs/deliveries/TASK-BIZ003/report.md",
     "status": "M层待验收",
     "executor_claim": "执行者报告24真实MySQL测试；可信订单快照含商品及接受证据；真实权益/交易及跨模块事务未联调，V5未改写。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "已验收（仅M，I/U/L未验）",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-BIZ003.md",
+      "acceptance": "ACC-012",
+      "merge": "9ccf187c6703305dd8a1d4d4631b068b81b9c765"
+    }
   },
   {
     "task": "TASK-BIZ004",
@@ -57,7 +95,14 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-b3d7-7861-b0d9-f566c8800f90/task-biz004/docs/deliveries/TASK-BIZ004/report.md",
     "status": "M层待验收",
     "executor_claim": "执行者报告21真实MySQL测试；历史统计快照未支持；初版应用测试TDD流程缺口已披露；真实提供方及I/U/L未完。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "返工；返回Prompt待人工带回原聊天",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-BIZ004.md",
+      "prompt": "docs/coordination/prompts/REV-BIZ004-01.md"
+    }
   },
   {
     "task": "TASK-BIZ005",
@@ -67,7 +112,14 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d576-d18a-7692-bb45-547c3d4e618a/task-biz005/docs/deliveries/TASK-BIZ005/report.md",
     "status": "M层待验收",
     "executor_claim": "执行者报告JDK21/真实MySQL15测试；图片改为私有数据库存储且逐次鉴权；处罚只建议。需检查存储取舍、隔离与故障回滚。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "返工；返回Prompt待人工带回原聊天",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-BIZ005.md",
+      "prompt": "docs/coordination/prompts/REV-BIZ005-01.md"
+    }
   },
   {
     "task": "TASK-BIZ006",
@@ -77,6 +129,13 @@
     "report": "C:/Users/28795/.codex/visualizations/2026/11/13/01a1d577-1352-77d2-a543-184d98e5fb40/task-biz006/docs/deliveries/TASK-BIZ006/report.md",
     "status": "候选实现，未满足全部M层条件",
     "executor_claim": "执行者报告20真实MySQL测试、V8重复迁移0；具体M缺口须读原report.md，不猜测、不自动批准。",
-    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对"
+    "coordinator_acceptance": "未完成；仅用户回传及对象/路径存在性核对",
+    "receipt_note": "原status/executor_claim/coordinator_acceptance为5f58477创建时接收快照，保留原值；当前以coordinator_review_update为准。",
+    "coordinator_review_update": {
+      "date": "2026-11-16",
+      "current_status": "返工；返回Prompt待人工带回原聊天",
+      "record": "docs/coordination/reviews/2026-11-16-TASK-BIZ006.md",
+      "prompt": "docs/coordination/prompts/REV-BIZ006-01.md"
+    }
   }
 ]

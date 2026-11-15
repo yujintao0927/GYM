@@ -1,0 +1,84 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO]
+[INFO] ------------------------< com.gym:booking-core >------------------------
+[INFO] Building booking-core 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24471 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ booking-core ---
+[INFO] Deleting C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-8e5e-7e31-8054-c8f1dfa127a0\task-biz003\modules\booking-core\target
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ booking-core ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ booking-core ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 21] to target\classes
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ booking-core ---
+[INFO] skip non existing resourceDirectory C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-8e5e-7e31-8054-c8f1dfa127a0\task-biz003\modules\booking-core\src\test\resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ booking-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug parameters release 21] to target\test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ booking-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gym.modules.bookingcore.BookingApplicationTest
+23:58:55.244 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz003 (MySQL 26.7)
+23:58:55.300 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:58:55.377 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.040s)
+23:58:55.398 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz003`: 5
+23:58:55.402 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz003` is up to date. No migration necessary.
+23:58:55.426 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz003 (MySQL 26.7)
+23:58:55.442 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:58:55.485 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz003 (MySQL 26.7)
+23:58:55.501 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:58:55.512 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.008s)
+23:58:55.523 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz003`: 5
+23:58:55.525 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz003` is up to date. No migration necessary.
+BOOKING_V5_FLYWAY_CHECKSUM=1511461192
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.144 s -- in com.gym.modules.bookingcore.BookingApplicationTest
+[INFO] Running com.gym.modules.bookingcore.BookingRulesTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.gym.modules.bookingcore.BookingRulesTest
+[INFO] Running com.gym.modules.bookingcore.DatabaseGuardTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.gym.modules.bookingcore.DatabaseGuardTest
+[INFO] Running com.gym.modules.bookingcore.MysqlBookingTest
+23:59:01.150 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz003 (MySQL 26.7)
+23:59:01.167 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:59:01.181 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.009s)
+23:59:01.196 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz003`: 5
+23:59:01.197 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz003` is up to date. No migration necessary.
+23:59:01.214 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz003 (MySQL 26.7)
+23:59:01.230 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:59:01.262 [main] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:mysql://localhost:3306/gym_dev_test_biz003 (MySQL 26.7)
+23:59:01.276 [main] WARN org.flywaydb.core.internal.database.base.Database -- Using MySQL 26.7 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+23:59:01.289 [main] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 1 migration (execution time 00:00.008s)
+23:59:01.300 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema `gym_dev_test_biz003`: 5
+23:59:01.301 [main] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema `gym_dev_test_biz003` is up to date. No migration necessary.
+BOOKING_V5_FLYWAY_CHECKSUM=1511461192
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 s -- in com.gym.modules.bookingcore.MysqlBookingTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ booking-core ---
+[INFO] Building jar: C:\Users\28795\.codex\visualizations\2026\11\13\01a1d576-8e5e-7e31-8054-c8f1dfa127a0\task-biz003\modules\booking-core\target\booking-core-0.0.1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.549 s
+[INFO] Finished at: 2026-11-13T23:59:02+08:00
+[INFO] ------------------------------------------------------------------------
